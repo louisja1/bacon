@@ -1,0 +1,1138 @@
+total parsing overhead 4.151199817657471
+total loading overhead 0.26920247077941895
+===== Pattern 0/120, proccessing 71 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'),)
+	the overhead of enumerating all rows in u is 0.18178725242614746 seconds.
+	bucketization overhead is 0.029338598251342773. There are 4284 buckets of dim 6
+	computing the result by the unified histogram takes 0.763026 seconds
+	computation overhead: 0.995095
+===== Pattern 1/120, proccessing 63 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.272304 seconds.
+	bucketization overhead is 0.050835
+	get the product of buckets take 0.144829 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 9581 buckets of dim 8
+	computing the result by the unified histogram takes 0.010476 seconds
+	computation overhead: 0.697802
+===== Pattern 2/120, proccessing 50 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.417996 seconds.
+	bucketization overhead is 0.065554
+	get the product of buckets take 0.195585 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 38822 buckets of dim 9
+	computing the result by the unified histogram takes 0.034602 seconds
+	computation overhead: 0.916543
+===== Pattern 3/120, proccessing 59 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.247093 seconds.
+	bucketization overhead is 0.034641
+	get the product of buckets take 0.147845 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5203 buckets of dim 10
+	computing the result by the unified histogram takes 0.006184 seconds
+	computation overhead: 0.534293
+===== Pattern 4/120, proccessing 87 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.351487 seconds.
+	bucketization overhead is 0.068022
+	get the product of buckets take 0.260051 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 45855 buckets of dim 13
+	computing the result by the unified histogram takes 0.070367 seconds
+	computation overhead: 0.977916
+===== Pattern 5/120, proccessing 38 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.326019 seconds.
+	bucketization overhead is 0.048052
+	get the product of buckets take 0.195782 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 35494 buckets of dim 14
+	computing the result by the unified histogram takes 0.038429 seconds
+	computation overhead: 0.804883
+===== Pattern 6/120, proccessing 19 SQLs that belong to join pattern: (('p.id', '=', 'pl.postid'),)
+	the overhead of enumerating all rows in p is 0.055327653884887695 seconds.
+	bucketization overhead is 0.0059163570404052734. There are 520 buckets of dim 9
+	computing the result by the unified histogram takes 0.000728 seconds
+	computation overhead: 0.063034
+===== Pattern 7/120, proccessing 2 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.350059 seconds.
+	bucketization overhead is 0.077278
+	get the product of buckets take 0.082011 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 19 buckets of dim 5
+	computing the result by the unified histogram takes 0.000368 seconds
+	computation overhead: 0.931455
+===== Pattern 8/120, proccessing 48 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'),)
+	the overhead of enumerating all rows in p is 0.4082639217376709 seconds.
+	bucketization overhead is 0.062454938888549805. There are 4522 buckets of dim 9
+	computing the result by the unified histogram takes 0.004951 seconds
+	computation overhead: 0.480984
+===== Pattern 9/120, proccessing 71 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'))
+	the overhead of enumerating all rows in is 0.953128 seconds.
+	bucketization overhead is 0.147032
+	get the product of buckets take 0.624695 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 13076 buckets of dim 11
+	computing the result by the unified histogram takes 0.035918 seconds
+	computation overhead: 2.333980
+===== Pattern 10/120, proccessing 41 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'),)
+	the overhead of enumerating all rows in p is 0.5918750762939453 seconds.
+	bucketization overhead is 0.10073399543762207. There are 7511 buckets of dim 9
+	computing the result by the unified histogram takes 0.019205 seconds
+	computation overhead: 0.715333
+===== Pattern 11/120, proccessing 57 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'),)
+	the overhead of enumerating all rows in u is 0.3175513744354248 seconds.
+	bucketization overhead is 0.048456430435180664. There are 4973 buckets of dim 7
+	computing the result by the unified histogram takes 0.016388 seconds
+	computation overhead: 0.388115
+===== Pattern 12/120, proccessing 71 SQLs that belong to join pattern: (('p.owneruserid', '=', 'u.id'),)
+	the overhead of enumerating all rows in u is 0.2480015754699707 seconds.
+	bucketization overhead is 0.04124259948730469. There are 24860 buckets of dim 12
+	computing the result by the unified histogram takes 0.033689 seconds
+	computation overhead: 0.330427
+===== Pattern 13/120, proccessing 41 SQLs that belong to join pattern: (('ph.userid', '=', 'u.id'),)
+	the overhead of enumerating all rows in u is 0.49863386154174805 seconds.
+	bucketization overhead is 0.0803842544555664. There are 12642 buckets of dim 7
+	computing the result by the unified histogram takes 0.010390 seconds
+	computation overhead: 0.592708
+===== Pattern 14/120, proccessing 47 SQLs that belong to join pattern: (('u.id', '=', 'v.userid'),)
+	the overhead of enumerating all rows in u is 0.08468937873840332 seconds.
+	bucketization overhead is 0.010231733322143555. There are 1378 buckets of dim 8
+	computing the result by the unified histogram takes 0.004372 seconds
+	computation overhead: 0.103856
+===== Pattern 15/120, proccessing 5 SQLs that belong to join pattern: (('p.id', '=', 't.excerptpostid'),)
+	the overhead of enumerating all rows in p is 0.004278898239135742 seconds.
+	bucketization overhead is 0.00010156631469726562. There are 1 buckets of dim 2
+	computing the result by the unified histogram takes 0.000109 seconds
+	computation overhead: 0.004987
+===== Pattern 16/120, proccessing 41 SQLs that belong to join pattern: (('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.263013 seconds.
+	bucketization overhead is 0.042979
+	get the product of buckets take 0.102384 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 7088 buckets of dim 14
+	computing the result by the unified histogram takes 0.019017 seconds
+	computation overhead: 0.648791
+===== Pattern 17/120, proccessing 7 SQLs that belong to join pattern: (('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.215315 seconds.
+	bucketization overhead is 0.050426
+	get the product of buckets take 0.005378 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 4 buckets of dim 8
+	computing the result by the unified histogram takes 0.000387 seconds
+	computation overhead: 0.496570
+===== Pattern 18/120, proccessing 31 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'))
+	the overhead of enumerating all rows in is 0.734646 seconds.
+	bucketization overhead is 0.123310
+	get the product of buckets take 0.224940 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2665 buckets of dim 11
+	computing the result by the unified histogram takes 0.002820 seconds
+	computation overhead: 1.519551
+===== Pattern 19/120, proccessing 3 SQLs that belong to join pattern: (('p.id', '=', 'pl.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.434621 seconds.
+	bucketization overhead is 0.058039
+	get the product of buckets take 0.063004 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 15 buckets of dim 9
+	computing the result by the unified histogram takes 0.000297 seconds
+	computation overhead: 0.779887
+===== Pattern 20/120, proccessing 14 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.843629 seconds.
+	bucketization overhead is 0.145573
+	get the product of buckets take 0.701811 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 7457 buckets of dim 14
+	computing the result by the unified histogram takes 0.006868 seconds
+	computation overhead: 2.247133
+===== Pattern 21/120, proccessing 45 SQLs that belong to join pattern: (('p.id', '=', 'v.postid'),)
+	the overhead of enumerating all rows in p is 0.7675402164459229 seconds.
+	bucketization overhead is 0.12298798561096191. There are 3967 buckets of dim 10
+	computing the result by the unified histogram takes 0.013760 seconds
+	computation overhead: 0.908284
+===== Pattern 22/120, proccessing 1 SQLs that belong to join pattern: (('p.id', '=', 'v.postid'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in u is 0.11529922485351562 seconds.
+	bucketization overhead is 0.007950067520141602. There are 1 buckets of dim 5
+	computing the result by the unified histogram takes 0.000227 seconds
+	computation overhead: 0.124638
+===== Pattern 23/120, proccessing 46 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.212953 seconds.
+	bucketization overhead is 0.035480
+	get the product of buckets take 0.087637 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1963 buckets of dim 9
+	computing the result by the unified histogram takes 0.002182 seconds
+	computation overhead: 0.511275
+===== Pattern 24/120, proccessing 31 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.postid'))
+	the overhead of enumerating all rows in is 0.467357 seconds.
+	bucketization overhead is 0.076238
+	get the product of buckets take 0.123628 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 816 buckets of dim 11
+	computing the result by the unified histogram takes 0.001122 seconds
+	computation overhead: 1.020710
+===== Pattern 25/120, proccessing 77 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.766386 seconds.
+	bucketization overhead is 0.122324
+	get the product of buckets take 0.620575 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 8154 buckets of dim 12
+	computing the result by the unified histogram takes 0.013699 seconds
+	computation overhead: 1.985254
+===== Pattern 26/120, proccessing 23 SQLs that belong to join pattern: (('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.551960 seconds.
+	bucketization overhead is 0.062047
+	get the product of buckets take 0.059608 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 393 buckets of dim 11
+	computing the result by the unified histogram takes 0.001584 seconds
+	computation overhead: 0.913096
+===== Pattern 27/120, proccessing 23 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.752038 seconds.
+	bucketization overhead is 0.085741
+	get the product of buckets take 0.172494 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 782 buckets of dim 13
+	computing the result by the unified histogram takes 0.001059 seconds
+	computation overhead: 1.423266
+===== Pattern 28/120, proccessing 40 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 0.460917 seconds.
+	bucketization overhead is 0.076203
+	get the product of buckets take 0.121388 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2201 buckets of dim 11
+	computing the result by the unified histogram takes 0.002666 seconds
+	computation overhead: 0.963295
+===== Pattern 29/120, proccessing 24 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'),)
+	the overhead of enumerating all rows in p is 0.03978705406188965 seconds.
+	bucketization overhead is 0.00554656982421875. There are 1672 buckets of dim 9
+	computing the result by the unified histogram takes 0.001693 seconds
+	computation overhead: 0.048079
+===== Pattern 30/120, proccessing 20 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.595809 seconds.
+	bucketization overhead is 0.102713
+	get the product of buckets take 0.480840 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 8213 buckets of dim 14
+	computing the result by the unified histogram takes 0.007653 seconds
+	computation overhead: 1.620121
+===== Pattern 31/120, proccessing 13 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.457425 seconds.
+	bucketization overhead is 0.065336
+	get the product of buckets take 0.044447 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2780 buckets of dim 13
+	computing the result by the unified histogram takes 0.002619 seconds
+	computation overhead: 0.832625
+===== Pattern 32/120, proccessing 9 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.638921 seconds.
+	bucketization overhead is 0.076884
+	get the product of buckets take 0.117271 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2360 buckets of dim 15
+	computing the result by the unified histogram takes 0.002205 seconds
+	computation overhead: 1.139724
+===== Pattern 33/120, proccessing 18 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.351162 seconds.
+	bucketization overhead is 0.048013
+	get the product of buckets take 0.133434 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 15533 buckets of dim 15
+	computing the result by the unified histogram takes 0.014616 seconds
+	computation overhead: 0.752470
+===== Pattern 34/120, proccessing 30 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.978013 seconds.
+	bucketization overhead is 0.137684
+	get the product of buckets take 0.921411 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 12544 buckets of dim 16
+	computing the result by the unified histogram takes 0.013892 seconds
+	computation overhead: 2.602221
+===== Pattern 35/120, proccessing 22 SQLs that belong to join pattern: (('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.752878 seconds.
+	bucketization overhead is 0.118815
+	get the product of buckets take 0.586569 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 9313 buckets of dim 15
+	computing the result by the unified histogram takes 0.010940 seconds
+	computation overhead: 1.930050
+===== Pattern 36/120, proccessing 20 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.347644 seconds.
+	bucketization overhead is 0.056448
+	get the product of buckets take 0.152841 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 6816 buckets of dim 15
+	computing the result by the unified histogram takes 0.006775 seconds
+	computation overhead: 0.781045
+===== Pattern 37/120, proccessing 32 SQLs that belong to join pattern: (('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.341077 seconds.
+	bucketization overhead is 0.065363
+	get the product of buckets take 0.113509 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 7379 buckets of dim 9
+	computing the result by the unified histogram takes 0.006219 seconds
+	computation overhead: 0.829012
+===== Pattern 38/120, proccessing 20 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.417863 seconds.
+	bucketization overhead is 0.052750
+	get the product of buckets take 0.239063 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 16524 buckets of dim 11
+	computing the result by the unified histogram takes 0.013930 seconds
+	computation overhead: 0.853344
+===== Pattern 39/120, proccessing 18 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.323259 seconds.
+	bucketization overhead is 0.053076
+	get the product of buckets take 0.117722 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1924 buckets of dim 11
+	computing the result by the unified histogram takes 0.001715 seconds
+	computation overhead: 0.732617
+===== Pattern 40/120, proccessing 65 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.989543 seconds.
+	bucketization overhead is 0.183279
+	get the product of buckets take 0.917772 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 10932 buckets of dim 12
+	computing the result by the unified histogram takes 0.015561 seconds
+	computation overhead: 2.669669
+===== Pattern 41/120, proccessing 29 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'))
+	the overhead of enumerating all rows in is 1.004510 seconds.
+	bucketization overhead is 0.126685
+	get the product of buckets take 0.276022 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 4229 buckets of dim 13
+	computing the result by the unified histogram takes 0.004445 seconds
+	computation overhead: 1.885417
+===== Pattern 42/120, proccessing 59 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.244077 seconds.
+	bucketization overhead is 0.189470
+	get the product of buckets take 0.786056 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 18937 buckets of dim 14
+	computing the result by the unified histogram takes 0.027214 seconds
+	computation overhead: 2.975812
+===== Pattern 43/120, proccessing 21 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.937727 seconds.
+	bucketization overhead is 0.100817
+	get the product of buckets take 0.238256 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1246 buckets of dim 13
+	computing the result by the unified histogram takes 0.004272 seconds
+	computation overhead: 1.740061
+===== Pattern 44/120, proccessing 21 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.157214 seconds.
+	bucketization overhead is 0.118104
+	get the product of buckets take 0.245660 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2288 buckets of dim 15
+	computing the result by the unified histogram takes 0.002661 seconds
+	computation overhead: 1.992703
+===== Pattern 45/120, proccessing 54 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.389780 seconds.
+	bucketization overhead is 0.082915
+	get the product of buckets take 0.344209 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 19602 buckets of dim 8
+	computing the result by the unified histogram takes 0.019180 seconds
+	computation overhead: 1.063676
+===== Pattern 46/120, proccessing 26 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.473139 seconds.
+	bucketization overhead is 0.066176
+	get the product of buckets take 0.296435 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 44583 buckets of dim 10
+	computing the result by the unified histogram takes 0.034851 seconds
+	computation overhead: 1.133857
+===== Pattern 47/120, proccessing 24 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.446425 seconds.
+	bucketization overhead is 0.095865
+	get the product of buckets take 0.125695 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 4175 buckets of dim 14
+	computing the result by the unified histogram takes 0.004674 seconds
+	computation overhead: 1.134610
+===== Pattern 48/120, proccessing 12 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.211232 seconds.
+	bucketization overhead is 0.201170
+	get the product of buckets take 0.959259 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 14234 buckets of dim 17
+	computing the result by the unified histogram takes 0.013484 seconds
+	computation overhead: 3.147069
+===== Pattern 49/120, proccessing 42 SQLs that belong to join pattern: (('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.464966 seconds.
+	bucketization overhead is 0.082931
+	get the product of buckets take 0.466406 seconds
+	run 3 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 60797 buckets of dim 14
+	computing the result by the unified histogram takes 0.070700 seconds
+	computation overhead: 1.305030
+===== Pattern 50/120, proccessing 30 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.527349 seconds.
+	bucketization overhead is 0.093422
+	get the product of buckets take 0.665164 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 81762 buckets of dim 15
+	computing the result by the unified histogram takes 0.084644 seconds
+	computation overhead: 1.574111
+===== Pattern 51/120, proccessing 16 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.422921 seconds.
+	bucketization overhead is 0.087732
+	get the product of buckets take 0.289178 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2674 buckets of dim 10
+	computing the result by the unified histogram takes 0.002177 seconds
+	computation overhead: 0.995378
+===== Pattern 52/120, proccessing 16 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.614706 seconds.
+	bucketization overhead is 0.068716
+	get the product of buckets take 0.505193 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 64539 buckets of dim 15
+	computing the result by the unified histogram takes 0.080986 seconds
+	computation overhead: 1.432847
+===== Pattern 53/120, proccessing 10 SQLs that belong to join pattern: (('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.470127 seconds.
+	bucketization overhead is 0.082488
+	get the product of buckets take 0.221838 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 10927 buckets of dim 15
+	computing the result by the unified histogram takes 0.009791 seconds
+	computation overhead: 1.034322
+===== Pattern 54/120, proccessing 6 SQLs that belong to join pattern: (('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.467109 seconds.
+	bucketization overhead is 0.056161
+	get the product of buckets take 0.122993 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2312 buckets of dim 15
+	computing the result by the unified histogram takes 0.002069 seconds
+	computation overhead: 0.895344
+===== Pattern 55/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.389891 seconds.
+	bucketization overhead is 0.053164
+	get the product of buckets take 0.138536 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 79 buckets of dim 8
+	computing the result by the unified histogram takes 0.000226 seconds
+	computation overhead: 0.817315
+===== Pattern 56/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.418657 seconds.
+	bucketization overhead is 0.057872
+	get the product of buckets take 0.256330 seconds
+	run 4 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 26099 buckets of dim 15
+	computing the result by the unified histogram takes 0.022612 seconds
+	computation overhead: 1.045657
+===== Pattern 57/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.344784 seconds.
+	bucketization overhead is 0.041671
+	get the product of buckets take 0.215567 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 438 buckets of dim 12
+	computing the result by the unified histogram takes 0.000503 seconds
+	computation overhead: 0.727120
+===== Pattern 58/120, proccessing 10 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.563430 seconds.
+	bucketization overhead is 0.074108
+	get the product of buckets take 0.416376 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 20608 buckets of dim 16
+	computing the result by the unified histogram takes 0.018147 seconds
+	computation overhead: 1.253475
+===== Pattern 59/120, proccessing 30 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.782586 seconds.
+	bucketization overhead is 0.122228
+	get the product of buckets take 0.500655 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 11683 buckets of dim 15
+	computing the result by the unified histogram takes 0.013826 seconds
+	computation overhead: 2.037943
+===== Pattern 60/120, proccessing 16 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.785645 seconds.
+	bucketization overhead is 0.086478
+	get the product of buckets take 0.155655 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 3276 buckets of dim 16
+	computing the result by the unified histogram takes 0.003278 seconds
+	computation overhead: 1.432238
+===== Pattern 61/120, proccessing 4 SQLs that belong to join pattern: (('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.183242 seconds.
+	bucketization overhead is 0.043314
+	get the product of buckets take 0.005080 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 3 buckets of dim 6
+	computing the result by the unified histogram takes 0.000189 seconds
+	computation overhead: 0.444125
+===== Pattern 62/120, proccessing 2 SQLs that belong to join pattern: (('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.234226 seconds.
+	bucketization overhead is 0.048668
+	get the product of buckets take 0.007896 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2 buckets of dim 2
+	computing the result by the unified histogram takes 0.000095 seconds
+	computation overhead: 0.497463
+===== Pattern 63/120, proccessing 8 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.299585 seconds.
+	bucketization overhead is 0.083830
+	get the product of buckets take 0.063117 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 8 buckets of dim 7
+	computing the result by the unified histogram takes 0.000191 seconds
+	computation overhead: 0.910118
+===== Pattern 64/120, proccessing 2 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.338640 seconds.
+	bucketization overhead is 0.090109
+	get the product of buckets take 0.056077 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2 buckets of dim 3
+	computing the result by the unified histogram takes 0.000156 seconds
+	computation overhead: 0.886863
+===== Pattern 65/120, proccessing 6 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 't.excerptpostid'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.330430 seconds.
+	bucketization overhead is 0.076985
+	get the product of buckets take 0.055963 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 10 buckets of dim 8
+	computing the result by the unified histogram takes 0.000172 seconds
+	computation overhead: 0.897171
+===== Pattern 66/120, proccessing 4 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.635705 seconds.
+	bucketization overhead is 0.062584
+	get the product of buckets take 0.076656 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 154 buckets of dim 11
+	computing the result by the unified histogram takes 0.000630 seconds
+	computation overhead: 1.051025
+===== Pattern 67/120, proccessing 4 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.431343 seconds.
+	bucketization overhead is 0.052130
+	get the product of buckets take 0.039902 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 49 buckets of dim 10
+	computing the result by the unified histogram takes 0.000347 seconds
+	computation overhead: 0.824924
+===== Pattern 68/120, proccessing 4 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.464380 seconds.
+	bucketization overhead is 0.089169
+	get the product of buckets take 0.064722 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 152 buckets of dim 12
+	computing the result by the unified histogram takes 0.000458 seconds
+	computation overhead: 0.987203
+===== Pattern 69/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.522801 seconds.
+	bucketization overhead is 0.100800
+	get the product of buckets take 0.133981 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 240 buckets of dim 12
+	computing the result by the unified histogram takes 0.000306 seconds
+	computation overhead: 1.249092
+===== Pattern 70/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.436597 seconds.
+	bucketization overhead is 0.099094
+	get the product of buckets take 0.130633 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 72 buckets of dim 11
+	computing the result by the unified histogram takes 0.000485 seconds
+	computation overhead: 1.166479
+===== Pattern 71/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.541361 seconds.
+	bucketization overhead is 0.069263
+	get the product of buckets take 0.213771 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 315 buckets of dim 12
+	computing the result by the unified histogram takes 0.000362 seconds
+	computation overhead: 1.081543
+===== Pattern 72/120, proccessing 4 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.owneruserid', '=', 'u.id'), ('ph.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 0.544956 seconds.
+	bucketization overhead is 0.099682
+	get the product of buckets take 0.202946 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 236 buckets of dim 13
+	computing the result by the unified histogram takes 0.000376 seconds
+	computation overhead: 1.250727
+===== Pattern 73/120, proccessing 30 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.596235 seconds.
+	bucketization overhead is 0.058100
+	get the product of buckets take 0.054231 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2302 buckets of dim 12
+	computing the result by the unified histogram takes 0.002548 seconds
+	computation overhead: 0.956753
+===== Pattern 74/120, proccessing 30 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.809067 seconds.
+	bucketization overhead is 0.082638
+	get the product of buckets take 0.131889 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5313 buckets of dim 14
+	computing the result by the unified histogram takes 0.006266 seconds
+	computation overhead: 1.364061
+===== Pattern 75/120, proccessing 24 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.157547 seconds.
+	bucketization overhead is 0.148526
+	get the product of buckets take 0.718657 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 18084 buckets of dim 18
+	computing the result by the unified histogram takes 0.019494 seconds
+	computation overhead: 2.673231
+===== Pattern 76/120, proccessing 16 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.049830 seconds.
+	bucketization overhead is 0.134796
+	get the product of buckets take 0.577940 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 13167 buckets of dim 17
+	computing the result by the unified histogram takes 0.013096 seconds
+	computation overhead: 2.294499
+===== Pattern 77/120, proccessing 10 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.938851 seconds.
+	bucketization overhead is 0.069597
+	get the product of buckets take 0.097678 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2077 buckets of dim 17
+	computing the result by the unified histogram takes 0.002427 seconds
+	computation overhead: 1.469522
+===== Pattern 78/120, proccessing 5 SQLs that belong to join pattern: (('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.745625 seconds.
+	bucketization overhead is 0.062514
+	get the product of buckets take 0.067117 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1276 buckets of dim 16
+	computing the result by the unified histogram takes 0.003829 seconds
+	computation overhead: 1.151198
+===== Pattern 79/120, proccessing 10 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.090669 seconds.
+	bucketization overhead is 0.089474
+	get the product of buckets take 0.164734 seconds
+	run 11 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 4330 buckets of dim 19
+	computing the result by the unified histogram takes 0.004459 seconds
+	computation overhead: 1.810313
+===== Pattern 80/120, proccessing 5 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.955988 seconds.
+	bucketization overhead is 0.080365
+	get the product of buckets take 0.143417 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2752 buckets of dim 18
+	computing the result by the unified histogram takes 0.002874 seconds
+	computation overhead: 1.547334
+===== Pattern 81/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 1.116260 seconds.
+	bucketization overhead is 0.122165
+	get the product of buckets take 0.547954 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2372 buckets of dim 14
+	computing the result by the unified histogram takes 0.002181 seconds
+	computation overhead: 2.395973
+===== Pattern 82/120, proccessing 10 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in u is 0.6058933734893799 seconds.
+	bucketization overhead is 0.0748591423034668. There are 3404 buckets of dim 14
+	computing the result by the unified histogram takes 0.009449 seconds
+	computation overhead: 0.692636
+===== Pattern 83/120, proccessing 16 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.postid'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 1.194710 seconds.
+	bucketization overhead is 0.124337
+	get the product of buckets take 0.148056 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1539 buckets of dim 15
+	computing the result by the unified histogram takes 0.005364 seconds
+	computation overhead: 2.049199
+===== Pattern 84/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.postid'))
+	the overhead of enumerating all rows in is 1.132519 seconds.
+	bucketization overhead is 0.120156
+	get the product of buckets take 0.163896 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 991 buckets of dim 13
+	computing the result by the unified histogram takes 0.002834 seconds
+	computation overhead: 2.098776
+===== Pattern 85/120, proccessing 16 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 2.373283 seconds.
+	bucketization overhead is 0.213227
+	get the product of buckets take 1.308149 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 11673 buckets of dim 16
+	computing the result by the unified histogram takes 0.011578 seconds
+	computation overhead: 4.721335
+===== Pattern 86/120, proccessing 18 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'))
+	the overhead of enumerating all rows in is 2.442243 seconds.
+	bucketization overhead is 0.227864
+	get the product of buckets take 1.376064 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 13627 buckets of dim 16
+	computing the result by the unified histogram takes 0.013837 seconds
+	computation overhead: 5.021553
+===== Pattern 87/120, proccessing 16 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('u.id', '=', 'v.userid'))
+	the overhead of enumerating all rows in is 1.477766 seconds.
+	bucketization overhead is 0.143420
+	get the product of buckets take 0.687479 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 7439 buckets of dim 17
+	computing the result by the unified histogram takes 0.007536 seconds
+	computation overhead: 2.836289
+===== Pattern 88/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'))
+	the overhead of enumerating all rows in is 1.433698 seconds.
+	bucketization overhead is 0.151299
+	get the product of buckets take 0.504571 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 4767 buckets of dim 15
+	computing the result by the unified histogram takes 0.004179 seconds
+	computation overhead: 2.748265
+===== Pattern 89/120, proccessing 22 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 0.717720 seconds.
+	bucketization overhead is 0.106233
+	get the product of buckets take 0.197598 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 859 buckets of dim 11
+	computing the result by the unified histogram takes 0.000989 seconds
+	computation overhead: 1.461265
+===== Pattern 90/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.082412 seconds.
+	bucketization overhead is 0.145694
+	get the product of buckets take 0.745742 seconds
+	run 6 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1664 buckets of dim 10
+	computing the result by the unified histogram takes 0.001435 seconds
+	computation overhead: 2.579308
+===== Pattern 91/120, proccessing 22 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 0.876529 seconds.
+	bucketization overhead is 0.104844
+	get the product of buckets take 0.225184 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 1846 buckets of dim 13
+	computing the result by the unified histogram takes 0.006095 seconds
+	computation overhead: 1.699519
+===== Pattern 92/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 1.252085 seconds.
+	bucketization overhead is 0.151098
+	get the product of buckets take 0.145766 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2111 buckets of dim 12
+	computing the result by the unified histogram takes 0.002284 seconds
+	computation overhead: 2.309792
+===== Pattern 93/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'))
+	the overhead of enumerating all rows in is 2.057276 seconds.
+	bucketization overhead is 0.210348
+	get the product of buckets take 1.380899 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5045 buckets of dim 12
+	computing the result by the unified histogram takes 0.005046 seconds
+	computation overhead: 4.580399
+===== Pattern 94/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.967147 seconds.
+	bucketization overhead is 0.196254
+	get the product of buckets take 1.192031 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 6415 buckets of dim 12
+	computing the result by the unified histogram takes 0.005941 seconds
+	computation overhead: 4.211268
+===== Pattern 95/120, proccessing 20 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 0.926890 seconds.
+	bucketization overhead is 0.102457
+	get the product of buckets take 0.340534 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 3093 buckets of dim 13
+	computing the result by the unified histogram takes 0.009386 seconds
+	computation overhead: 1.731382
+===== Pattern 96/120, proccessing 20 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.143012 seconds.
+	bucketization overhead is 0.106069
+	get the product of buckets take 0.241172 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 6922 buckets of dim 15
+	computing the result by the unified histogram takes 0.007472 seconds
+	computation overhead: 2.000653
+===== Pattern 97/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 1.410527 seconds.
+	bucketization overhead is 0.135629
+	get the product of buckets take 0.461217 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5894 buckets of dim 14
+	computing the result by the unified histogram takes 0.006821 seconds
+	computation overhead: 2.737723
+===== Pattern 98/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.226259 seconds.
+	bucketization overhead is 0.109293
+	get the product of buckets take 0.470621 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 7946 buckets of dim 14
+	computing the result by the unified histogram takes 0.020292 seconds
+	computation overhead: 2.268290
+===== Pattern 99/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.722818 seconds.
+	bucketization overhead is 0.230314
+	get the product of buckets take 1.522513 seconds
+	run 13 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 18106 buckets of dim 14
+	computing the result by the unified histogram takes 0.020203 seconds
+	computation overhead: 4.348743
+===== Pattern 100/120, proccessing 28 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.647487 seconds.
+	bucketization overhead is 0.145216
+	get the product of buckets take 0.647188 seconds
+	run 15 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 22014 buckets of dim 16
+	computing the result by the unified histogram takes 0.024490 seconds
+	computation overhead: 3.090088
+===== Pattern 101/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.036005 seconds.
+	bucketization overhead is 0.158906
+	get the product of buckets take 0.705047 seconds
+	run 5 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 3608 buckets of dim 14
+	computing the result by the unified histogram takes 0.003618 seconds
+	computation overhead: 2.570180
+===== Pattern 102/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.091799 seconds.
+	bucketization overhead is 0.158370
+	get the product of buckets take 0.813333 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5560 buckets of dim 16
+	computing the result by the unified histogram takes 0.015359 seconds
+	computation overhead: 2.758536
+===== Pattern 103/120, proccessing 9 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.092766 seconds.
+	bucketization overhead is 0.151772
+	get the product of buckets take 0.700678 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 6961 buckets of dim 16
+	computing the result by the unified histogram takes 0.022042 seconds
+	computation overhead: 2.624846
+===== Pattern 104/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.297007 seconds.
+	bucketization overhead is 0.199655
+	get the product of buckets take 1.094201 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 8056 buckets of dim 17
+	computing the result by the unified histogram takes 0.008062 seconds
+	computation overhead: 3.342656
+===== Pattern 105/120, proccessing 14 SQLs that belong to join pattern: (('b.userid', '=', 'u.id'), ('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.450278 seconds.
+	bucketization overhead is 0.189084
+	get the product of buckets take 0.913294 seconds
+	run 11 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 12401 buckets of dim 19
+	computing the result by the unified histogram takes 0.013915 seconds
+	computation overhead: 3.442642
+===== Pattern 106/120, proccessing 9 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.404999 seconds.
+	bucketization overhead is 0.204152
+	get the product of buckets take 0.924158 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 15935 buckets of dim 19
+	computing the result by the unified histogram takes 0.015460 seconds
+	computation overhead: 3.405834
+===== Pattern 107/120, proccessing 10 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.911022 seconds.
+	bucketization overhead is 0.173688
+	get the product of buckets take 1.119486 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 806 buckets of dim 12
+	computing the result by the unified histogram takes 0.002304 seconds
+	computation overhead: 3.962171
+===== Pattern 108/120, proccessing 10 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 1.198112 seconds.
+	bucketization overhead is 0.120883
+	get the product of buckets take 0.117627 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 480 buckets of dim 13
+	computing the result by the unified histogram takes 0.001620 seconds
+	computation overhead: 2.047611
+===== Pattern 109/120, proccessing 10 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'))
+	the overhead of enumerating all rows in is 1.075615 seconds.
+	bucketization overhead is 0.129582
+	get the product of buckets take 0.353950 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 708 buckets of dim 14
+	computing the result by the unified histogram takes 0.002309 seconds
+	computation overhead: 2.147456
+===== Pattern 110/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.014941 seconds.
+	bucketization overhead is 0.109470
+	get the product of buckets take 0.272098 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 785 buckets of dim 13
+	computing the result by the unified histogram takes 0.000835 seconds
+	computation overhead: 1.884961
+===== Pattern 111/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.289806 seconds.
+	bucketization overhead is 0.185888
+	get the product of buckets take 0.930204 seconds
+	run 10 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 540 buckets of dim 12
+	computing the result by the unified histogram takes 0.001058 seconds
+	computation overhead: 3.403406
+===== Pattern 112/120, proccessing 8 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('c.userid', '=', 'u.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.relatedpostid'), ('p.id', '=', 'v.postid'))
+	the overhead of enumerating all rows in is 1.249710 seconds.
+	bucketization overhead is 0.130916
+	get the product of buckets take 0.352096 seconds
+	run 12 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 805 buckets of dim 14
+	computing the result by the unified histogram takes 0.002476 seconds
+	computation overhead: 2.306680
+===== Pattern 113/120, proccessing 2 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.571128 seconds.
+	bucketization overhead is 0.073778
+	get the product of buckets take 0.154056 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 9 buckets of dim 10
+	computing the result by the unified histogram takes 0.000253 seconds
+	computation overhead: 1.198907
+===== Pattern 114/120, proccessing 2 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.744563 seconds.
+	bucketization overhead is 0.098341
+	get the product of buckets take 0.220643 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 19 buckets of dim 11
+	computing the result by the unified histogram takes 0.000191 seconds
+	computation overhead: 1.521841
+===== Pattern 115/120, proccessing 2 SQLs that belong to join pattern: (('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.635359 seconds.
+	bucketization overhead is 0.061816
+	get the product of buckets take 0.085944 seconds
+	run 7 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 6 buckets of dim 10
+	computing the result by the unified histogram takes 0.000382 seconds
+	computation overhead: 1.081410
+===== Pattern 116/120, proccessing 2 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.922536 seconds.
+	bucketization overhead is 0.109380
+	get the product of buckets take 0.282298 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 27 buckets of dim 12
+	computing the result by the unified histogram takes 0.000192 seconds
+	computation overhead: 1.814759
+===== Pattern 117/120, proccessing 2 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.784832 seconds.
+	bucketization overhead is 0.073140
+	get the product of buckets take 0.165545 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 9 buckets of dim 11
+	computing the result by the unified histogram takes 0.000181 seconds
+	computation overhead: 1.455920
+===== Pattern 118/120, proccessing 2 SQLs that belong to join pattern: (('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 0.927860 seconds.
+	bucketization overhead is 0.110716
+	get the product of buckets take 0.342437 seconds
+	run 9 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 19 buckets of dim 12
+	computing the result by the unified histogram takes 0.000150 seconds
+	computation overhead: 1.794117
+===== Pattern 119/120, proccessing 2 SQLs that belong to join pattern: (('c.postid', '=', 'p.id'), ('p.id', '=', 'ph.postid'), ('p.id', '=', 'pl.postid'), ('p.id', '=', 'v.postid'), ('p.owneruserid', '=', 'u.id'))
+	the overhead of enumerating all rows in is 1.095735 seconds.
+	bucketization overhead is 0.117020
+	get the product of buckets take 0.243660 seconds
+	run 11 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 27 buckets of dim 13
+	computing the result by the unified histogram takes 0.000154 seconds
+	computation overhead: 2.003148
+total computation overhead: 193.692842

@@ -1,0 +1,133 @@
+total parsing overhead 18.887861013412476
+total loading overhead 2.556121349334717
+===== Pattern 0/16, proccessing 6908 SQLs that belong to join pattern: ()
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in hd is 0.0027761459350585938 seconds.
+	bucketization overhead is 2.6702880859375e-05. There are 60 buckets of dim 2
+	computing the result by the unified histogram takes 0.512975 seconds
+	[hd] computation overhead: 0.515954
+	the overhead of enumerating all rows in d is 0.03531074523925781 seconds.
+	bucketization overhead is 0.0007345676422119141. There are 2401 buckets of dim 2
+	computing the result by the unified histogram takes 0.077353 seconds
+	[d] computation overhead: 0.114136
+	the overhead of enumerating all rows in ss is 7.6364710330963135 seconds.
+	bucketization overhead is 0.2154543399810791. There are 437202 buckets of dim 3
+	computing the result by the unified histogram takes 5.928416 seconds
+	[ss] computation overhead: 13.809354
+	the overhead of enumerating all rows in s is 0.0021250247955322266 seconds.
+	bucketization overhead is 3.3855438232421875e-05. There are 14 buckets of dim 1
+	computing the result by the unified histogram takes 0.001144 seconds
+	[s] computation overhead: 0.020195
+	the overhead of enumerating all rows in cd is 0.34824538230895996 seconds.
+	bucketization overhead is 1.8596649169921875e-05. There are 7 buckets of dim 1
+	computing the result by the unified histogram takes 0.000839 seconds
+	[cd] computation overhead: 0.349483
+	optimization overhead: 0.912956
+	computation overhead: 15.734953 with 0 x Nones (which are at least 0.000000)
+===== Pattern 1/16, proccessing 651 SQLs that belong to join pattern: (('s.s_store_sk', '=', 'ss.ss_store_sk'),)
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 11.508649349212646 seconds.
+	bucketization overhead is 4.092700242996216. There are 1335031 buckets of dim 4
+	computing the result by the unified histogram takes 8.251025 seconds
+	optimization overhead: 0.091669
+	computation overhead: 24.104570 with 0 x Nones (which are at least 0.000000)
+===== Pattern 2/16, proccessing 729 SQLs that belong to join pattern: (('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 12.772765398025513 seconds.
+	bucketization overhead is 3.992210626602173. There are 4397952 buckets of dim 6
+	computing the result by the unified histogram takes 34.719960 seconds
+	optimization overhead: 0.082000
+	computation overhead: 52.418153 with 0 x Nones (which are at least 0.000000)
+===== Pattern 3/16, proccessing 1242 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'),)
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in d is 11.461299180984497 seconds.
+	bucketization overhead is 3.0850749015808105. There are 4036126 buckets of dim 5
+	computing the result by the unified histogram takes 52.275126 seconds
+	optimization overhead: 0.074716
+	computation overhead: 67.335425 with 0 x Nones (which are at least 0.000000)
+===== Pattern 4/16, proccessing 341 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in d is 15.00591778755188 seconds.
+	bucketization overhead is 3.0011911392211914. There are 3416431 buckets of dim 6
+	computing the result by the unified histogram takes 10.552442 seconds
+	optimization overhead: 0.041178
+	computation overhead: 28.912726 with 0 x Nones (which are at least 0.000000)
+===== Pattern 5/16, proccessing 289 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 14.368780612945557 seconds.
+	bucketization overhead is 2.6904571056365967. There are 1072361 buckets of dim 5
+	computing the result by the unified histogram takes 3.119661 seconds
+	optimization overhead: 0.041971
+	computation overhead: 20.325286 with 0 x Nones (which are at least 0.000000)
+===== Pattern 6/16, proccessing 1872 SQLs that belong to join pattern: (('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'),)
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in hd is 11.785535335540771 seconds.
+	bucketization overhead is 3.1571755409240723. There are 3863647 buckets of dim 5
+	computing the result by the unified histogram takes 83.653958 seconds
+	optimization overhead: 0.054781
+	computation overhead: 99.024103 with 0 x Nones (which are at least 0.000000)
+===== Pattern 7/16, proccessing 532 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 12.439974546432495 seconds.
+	bucketization overhead is 2.944364547729492. There are 4448860 buckets of dim 6
+	computing the result by the unified histogram takes 22.142573 seconds
+	optimization overhead: 0.043669
+	computation overhead: 37.858234 with 0 x Nones (which are at least 0.000000)
+===== Pattern 8/16, proccessing 415 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in hd is 14.948816299438477 seconds.
+	bucketization overhead is 3.1824655532836914. There are 3499327 buckets of dim 6
+	computing the result by the unified histogram takes 15.441182 seconds
+	optimization overhead: 0.042901
+	computation overhead: 33.884867 with 0 x Nones (which are at least 0.000000)
+===== Pattern 9/16, proccessing 1096 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 14.322389602661133 seconds.
+	bucketization overhead is 3.2008721828460693. There are 5247853 buckets of dim 8
+	computing the result by the unified histogram takes 67.390110 seconds
+	optimization overhead: 0.066745
+	computation overhead: 85.421922 with 0 x Nones (which are at least 0.000000)
+===== Pattern 10/16, proccessing 686 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in hd is 16.676509380340576 seconds.
+	bucketization overhead is 3.163490056991577. There are 5229837 buckets of dim 8
+	computing the result by the unified histogram takes 40.089061 seconds
+	optimization overhead: 0.041970
+	computation overhead: 60.281460 with 0 x Nones (which are at least 0.000000)
+===== Pattern 11/16, proccessing 2632 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 18.141344785690308 seconds.
+	bucketization overhead is 3.336315393447876. There are 5263531 buckets of dim 9
+	computing the result by the unified histogram takes 170.681116 seconds
+	optimization overhead: 0.071117
+	computation overhead: 192.538725 with 0 x Nones (which are at least 0.000000)
+===== Pattern 12/16, proccessing 586 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 15.89637041091919 seconds.
+	bucketization overhead is 3.124016284942627. There are 4715228 buckets of dim 7
+	computing the result by the unified histogram takes 30.345104 seconds
+	optimization overhead: 0.040093
+	computation overhead: 49.688067 with 0 x Nones (which are at least 0.000000)
+===== Pattern 13/16, proccessing 418 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'),)
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in cd is 12.946976900100708 seconds.
+	bucketization overhead is 2.6365811824798584. There are 911046 buckets of dim 4
+	computing the result by the unified histogram takes 3.630568 seconds
+	optimization overhead: 0.033693
+	computation overhead: 19.330354 with 0 x Nones (which are at least 0.000000)
+===== Pattern 14/16, proccessing 1111 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in hd is 12.777270078659058 seconds.
+	bucketization overhead is 3.0296425819396973. There are 5215089 buckets of dim 7
+	computing the result by the unified histogram takes 66.320153 seconds
+	optimization overhead: 0.035813
+	computation overhead: 82.583589 with 0 x Nones (which are at least 0.000000)
+===== Pattern 15/16, proccessing 492 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in s is 15.904282808303833 seconds.
+	bucketization overhead is 3.079970598220825. There are 4418272 buckets of dim 7
+	computing the result by the unified histogram takes 21.103681 seconds
+	optimization overhead: 0.042219
+	computation overhead: 40.478775 with 0 x Nones (which are at least 0.000000)
+total optimization overhead: 1.717491
+total computation overhead: 909.921209 with 0 x Nones (which are at least 0.000000)

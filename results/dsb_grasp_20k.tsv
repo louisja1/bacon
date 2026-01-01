@@ -1,0 +1,22 @@
+pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext	sec_hybrid	switch_to_hybrid
+0	()	1	6908	1271.6809890000022	0	0.0	643.883739	0	0.0	14.923573	15.734953	TreeBatchCext
+0(hd)	(hd)	1	2646				0.233651	0	0.0	0.767879	0.515954	
+0(d)	(d)	1	2585				8.270735	0	0.0	0.120881	0.114136	
+0(ss)	(ss)	1	1390				634.449513	0	0.0	13.583576	13.809354	
+0(s)	(s)	1	189				0.000889	0	0.0	0.018441	0.020195	
+0(cd)	(cd)	1	98				0.928951	0	0.0	0.353327	0.349483	
+1	(('s.s_store_sk', '=', 'ss.ss_store_sk'),)	2	651	628.6025670000004	0	0.0	175.290737	0	0.0	23.128722	24.10457	TreeBatchCext
+2	(('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	3	729	776.890877	0	0.0	173.124172	0	0.0	53.572217	52.418153	TreeBatchCext
+3	(('d.d_date_sk', '=', 'ss.ss_sold_date_sk'),)	2	1242	1218.4767160000006	0	0.0	463.751903	0	0.0	65.999956	67.335425	TreeBatchCext
+4	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'))	3	341	581.6307569999998	0	0.0	76.179758	0	0.0	29.30178	28.912726	TreeBatchCext
+5	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	3	289	462.740253	0	0.0	63.932718	0	0.0	22.119447	20.325286	TreeBatchCext
+6	(('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'),)	2	1872	1811.8509329999995	0	0.0	648.752283	0	0.0	99.653503	99.024103	TreeBatchCext
+7	(('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	3	532	592.7304139999999	0	0.0	127.713839	0	0.0	37.287139	37.858234	TreeBatchCext
+8	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))	3	415	686.1508879999999	0	0.0	85.616792	0	0.0	33.259723	33.884867	TreeBatchCext
+9	(('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	4	1096	1346.2399830000004	0	0.0	284.668906	0	0.0	85.008259	85.421922	TreeBatchCext
+10	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))	4	686	1239.0040059999994	0	0.0	140.635966	0	0.0	59.722049	60.28146	TreeBatchCext
+11	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	5	2632	5316.665721999995	0	0.0	646.996173	0	0.0	191.909528	192.538725	TreeBatchCext
+12	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	4	586	1042.4622109999996	0	0.0	122.820869	0	0.0	49.795797	49.688067	TreeBatchCext
+13	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'),)	2	418	642.9500759999994	0	0.0	94.287463	0	0.0	19.230618	19.330354	TreeBatchCext
+14	(('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))	3	1111	1201.706732000001	0	0.0	337.267749	0	0.0	81.599926	82.583589	TreeBatchCext
+15	(('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))	4	492	926.183577000001	0	0.0	104.353821	0	0.0	39.810928	40.478775	TreeBatchCext

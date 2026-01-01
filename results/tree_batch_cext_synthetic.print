@@ -1,0 +1,150 @@
+total parsing overhead 4.5575501918792725
+total loading overhead 0.4634077548980713
+===== Pattern 0/16, proccessing 1274 SQLs that belong to join pattern: ()
+	the overhead of enumerating all rows in ci is 25.194956302642822 seconds.
+	bucketization overhead is 0.0019659996032714844. There are 4609 buckets of dim 2
+	computing the result by the unified histogram takes 0.736640 seconds
+	[ci] computation overhead: 26.105311
+	the overhead of enumerating all rows in mk is 0.8550064563751221 seconds.
+	bucketization overhead is 0.0003466606140136719. There are 538 buckets of dim 1
+	computing the result by the unified histogram takes 0.005499 seconds
+	[mk] computation overhead: 0.863036
+	the overhead of enumerating all rows in mc is 0.8254094123840332 seconds.
+	bucketization overhead is 0.0005815029144287109. There are 794 buckets of dim 2
+	computing the result by the unified histogram takes 0.008312 seconds
+	[mc] computation overhead: 0.839587
+	the overhead of enumerating all rows in t is 0.4876086711883545 seconds.
+	bucketization overhead is 0.00015878677368164062. There are 224 buckets of dim 2
+	computing the result by the unified histogram takes 0.000687 seconds
+	[t] computation overhead: 0.488941
+	the overhead of enumerating all rows in mi is 2.200035333633423 seconds.
+	bucketization overhead is 1.621246337890625e-05. There are 3 buckets of dim 1
+	computing the result by the unified histogram takes 0.000214 seconds
+	[mi] computation overhead: 2.200565
+	computation overhead: 30.521989
+===== Pattern 1/16, proccessing 192 SQLs that belong to join pattern: (('mi.movie_id', '=', 't.id'),)
+	the overhead of enumerating all rows in t is 20.94465470314026 seconds.
+	bucketization overhead is 3.1975603103637695. There are 7401 buckets of dim 3
+	computing the result by the unified histogram takes 0.011840 seconds
+	computation overhead: 24.162579
+===== Pattern 2/16, proccessing 403 SQLs that belong to join pattern: (('ci.movie_id', '=', 't.id'),)
+	the overhead of enumerating all rows in t is 56.6145396232605 seconds.
+	bucketization overhead is 9.997248411178589. There are 436865 buckets of dim 4
+	computing the result by the unified histogram takes 1.138085 seconds
+	computation overhead: 67.812101
+===== Pattern 3/16, proccessing 251 SQLs that belong to join pattern: (('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 149.041326 seconds.
+	bucketization overhead is 18.949841
+	get the product of buckets take 173.222344 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 3365106 buckets of dim 5
+	computing the result by the unified histogram takes 5.855807 seconds
+	computation overhead: 379.490425
+===== Pattern 4/16, proccessing 213 SQLs that belong to join pattern: (('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 131.903162 seconds.
+	bucketization overhead is 6.884040
+	get the product of buckets take 34.251634 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 549130 buckets of dim 5
+	computing the result by the unified histogram takes 1.010399 seconds
+	computation overhead: 189.890085
+===== Pattern 5/16, proccessing 321 SQLs that belong to join pattern: (('mc.movie_id', '=', 't.id'),)
+	the overhead of enumerating all rows in t is 5.236559152603149 seconds.
+	bucketization overhead is 0.7668859958648682. There are 74921 buckets of dim 4
+	computing the result by the unified histogram takes 0.214430 seconds
+	computation overhead: 6.229458
+===== Pattern 6/16, proccessing 185 SQLs that belong to join pattern: (('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 4.720046 seconds.
+	bucketization overhead is 3.994789
+	get the product of buckets take 7.698761 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 95210 buckets of dim 5
+	computing the result by the unified histogram takes 0.128177 seconds
+	computation overhead: 22.428105
+===== Pattern 7/16, proccessing 255 SQLs that belong to join pattern: (('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 16.536789 seconds.
+	bucketization overhead is 3.825514
+	get the product of buckets take 22.357317 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 2341404 buckets of dim 5
+	computing the result by the unified histogram takes 4.272418 seconds
+	computation overhead: 59.464783
+===== Pattern 8/16, proccessing 396 SQLs that belong to join pattern: (('mk.movie_id', '=', 't.id'),)
+	the overhead of enumerating all rows in t is 6.827090501785278 seconds.
+	bucketization overhead is 1.4001765251159668. There are 104535 buckets of dim 3
+	computing the result by the unified histogram takes 0.309022 seconds
+	computation overhead: 8.551191
+===== Pattern 9/16, proccessing 205 SQLs that belong to join pattern: (('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 26.617188 seconds.
+	bucketization overhead is 5.455958
+	get the product of buckets take 27.716183 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 619993 buckets of dim 5
+	computing the result by the unified histogram takes 0.975784 seconds
+	computation overhead: 76.094097
+===== Pattern 10/16, proccessing 168 SQLs that belong to join pattern: (('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 24.480320 seconds.
+	bucketization overhead is 3.455367
+	get the product of buckets take 12.702123 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 20573 buckets of dim 4
+	computing the result by the unified histogram takes 0.026548 seconds
+	computation overhead: 50.787134
+===== Pattern 11/16, proccessing 304 SQLs that belong to join pattern: (('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 14.056640 seconds.
+	bucketization overhead is 3.161974
+	get the product of buckets take 10.217800 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 199457 buckets of dim 4
+	computing the result by the unified histogram takes 0.491544 seconds
+	computation overhead: 37.132944
+===== Pattern 12/16, proccessing 266 SQLs that belong to join pattern: (('ci.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 136.311697 seconds.
+	bucketization overhead is 6.958433
+	get the product of buckets take 101.202806 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 10265070 buckets of dim 5
+	computing the result by the unified histogram takes 17.502217 seconds
+	computation overhead: 282.365884
+===== Pattern 13/16, proccessing 240 SQLs that belong to join pattern: (('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 28.332832 seconds.
+	bucketization overhead is 4.535358
+	get the product of buckets take 39.162793 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 861478 buckets of dim 4
+	computing the result by the unified histogram takes 1.371585 seconds
+	computation overhead: 85.279300
+===== Pattern 14/16, proccessing 228 SQLs that belong to join pattern: (('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'))
+	the overhead of enumerating all rows in is 134.082396 seconds.
+	bucketization overhead is 9.948825
+	get the product of buckets take 67.552306 seconds
+	run 103 single-table sorting queries
+	cache has 0 hits
+	now start to compute the counts ......
+	There are 5613676 buckets of dim 6
+	computing the result by the unified histogram takes 11.513464 seconds
+	computation overhead: 245.537502
+===== Pattern 15/16, proccessing 99 SQLs that belong to join pattern: (('mi_idx.movie_id', '=', 't.id'),)
+	the overhead of enumerating all rows in t is 2.942707061767578 seconds.
+	bucketization overhead is 0.29316043853759766. There are 952 buckets of dim 3
+	computing the result by the unified histogram takes 0.001502 seconds
+	computation overhead: 3.239908
+total computation overhead: 1580.005750

@@ -1,0 +1,18 @@
+{
+    "path_to_sql": "../workload/job_light.sql",
+    "dir_to_output": "../results/",
+    "group_by": "join pattern",
+    "path_to_model": "../models/20251230_075047.pkl",
+    "params": {
+        "seqproc": {
+            "timeout_in_sec": 900
+        },
+        "postfilter": {
+            "timeout_in_sec": 3600
+        },
+        "tree_batch_cext": {
+            "batch_size": 50000
+        }
+    },
+    "debug": false
+}

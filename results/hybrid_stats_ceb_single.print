@@ -1,0 +1,40 @@
+total parsing overhead 0.3570845127105713
+total loading overhead 0.0480189323425293
+===== Pattern 0/1, proccessing 632 SQLs that belong to join pattern: ()
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in b is 0.03989839553833008 seconds.
+	bucketization overhead is 4.100799560546875e-05. There are 41 buckets of dim 1
+	computing the result by the unified histogram takes 0.505595 seconds
+	[b] computation overhead: 0.546084
+	the overhead of enumerating all rows in u is 0.0522465705871582 seconds.
+	bucketization overhead is 0.0016949176788330078. There are 2233 buckets of dim 5
+	computing the result by the unified histogram takes 0.007646 seconds
+	[u] computation overhead: 0.062723
+	the overhead of enumerating all rows in c is 0.12798857688903809 seconds.
+	bucketization overhead is 0.00014591217041015625. There are 191 buckets of dim 2
+	computing the result by the unified histogram takes 0.001080 seconds
+	[c] computation overhead: 0.131268
+	the overhead of enumerating all rows in ph is 0.22716140747070312 seconds.
+	bucketization overhead is 0.0001938343048095703. There are 256 buckets of dim 2
+	computing the result by the unified histogram takes 0.001107 seconds
+	[ph] computation overhead: 0.231236
+	the overhead of enumerating all rows in v is 0.06733322143554688 seconds.
+	bucketization overhead is 7.557868957519531e-05. There are 81 buckets of dim 3
+	computing the result by the unified histogram takes 0.000860 seconds
+	[v] computation overhead: 0.068823
+	the overhead of enumerating all rows in p is 0.1219184398651123 seconds.
+	bucketization overhead is 0.008790969848632812. There are 5755 buckets of dim 7
+	computing the result by the unified histogram takes 0.009612 seconds
+	[p] computation overhead: 0.142984
+	the overhead of enumerating all rows in pl is 0.013258218765258789 seconds.
+	bucketization overhead is 3.600120544433594e-05. There are 39 buckets of dim 2
+	computing the result by the unified histogram takes 0.000395 seconds
+	[pl] computation overhead: 0.014188
+	the overhead of enumerating all rows in t is 0.0008211135864257812 seconds.
+	bucketization overhead is 2.86102294921875e-06. There are 1 buckets of dim 0
+	computing the result by the unified histogram takes 0.167207 seconds
+	[t] computation overhead: 0.168209
+	optimization overhead: 0.842885
+	computation overhead: 2.214274 with 0 x Nones (which are at least 0.000000)
+total optimization overhead: 0.842885
+total computation overhead: 2.214274 with 0 x Nones (which are at least 0.000000)

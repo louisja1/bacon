@@ -1,0 +1,20 @@
+{
+    "badges.userid": "users.id",
+
+    "comments.postid": "posts.id",
+    "comments.userid": "users.id",
+
+    "posthistory.postid": "posts.id",
+    "posthistory.userid": "users.id",
+
+    "postlinks.postid": "posts.id",
+    "postlinks.relatedpostid": "posts.id",
+
+    "posts.lasteditoruserid": "users.id",
+    "posts.owneruserid": "users.id",
+
+    "tags.excerptpostid": "posts.id",
+
+    "votes.postid": "posts.id",
+    "votes.userid": "users.id"
+}

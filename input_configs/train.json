@@ -1,0 +1,19 @@
+{
+    "paths_to_sql": [
+        "../workload/synthetic.sql",
+        "../workload/scale.sql",
+        "../workload/job_light_join.sql",
+        "../workload/job_light_single.sql",
+        "../workload/stats_ceb_single.sql",
+        "../workload/stats_ceb_join.sql",
+        "../workload/stats_ceb.sql",
+        "../workload/dsb_grasp_20k.sql",
+        "../workload/job_light.sql"
+    ],
+    "paths_to_training_sql": [
+        "../workload/job_light_join.sql",
+        "../workload/stats_ceb_join.sql"
+    ],
+    "dir_to_training_data": "../training_data/",
+    "dir_to_models": "../models/"
+}

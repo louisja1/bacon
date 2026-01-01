@@ -1,0 +1,4 @@
+comment = 'Table-level bucketization'
+default_version = '1.0'
+relocatable = true
+module_pathname = '$libdir/find_bucket_table'

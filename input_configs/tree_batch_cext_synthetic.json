@@ -1,0 +1,7 @@
+{
+    "path_to_sql": "../workload/synthetic.sql",
+    "dir_to_output": "../results/",
+    "group_by": "join pattern",
+    "batch_size": 50000,
+    "debug": false
+}

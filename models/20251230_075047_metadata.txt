@@ -1,0 +1,42 @@
+{
+  "training_sql": [
+    "../workload/job_light_join.sql",
+    "../workload/stats_ceb_join.sql"
+  ],
+  "features": [
+    "n_tables",
+    "n_queries",
+    "sum_base_table_size",
+    "max_base_table_size",
+    "mean_base_table_size",
+    "log_sum_intermediate_join_size",
+    "log_max_intermediate_join_size",
+    "log_mean_intermediate_join_size",
+    "sum_cost_of_scanning",
+    "max_cost_of_scanning",
+    "mean_cost_of_scanning",
+    "sum_number_of_selection_column",
+    "max_number_of_selection_column",
+    "mean_number_of_selection_column",
+    "prod_number_of_bucket",
+    "sum_query_coverage_ratio",
+    "max_query_coverage_ratio",
+    "mean_query_coverage_ratio"
+  ],
+  "train_val_split": 0.25,
+  "classifier": "RandomForestClassifier",
+  "classifier_params": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "class_weight": {
+      "0": 1,
+      "1": 2,
+      "2": 2
+    }
+  },
+  "precision_threshold_for_calibration": 0.9,
+  "threshold_for_class_1": 0.18479581529581535,
+  "threshold_for_class_2": 0.891047619047619,
+  "end_to_end_training_time": 0.19351625442504883
+}

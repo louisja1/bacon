@@ -1,0 +1,9 @@
+numpy
+psycopg2
+pandas
+scikit-learn
+matplotlib
+numba
+sqlglot
+tqdm
+pulp

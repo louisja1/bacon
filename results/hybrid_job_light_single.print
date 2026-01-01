@@ -1,0 +1,32 @@
+total parsing overhead 0.10133528709411621
+total loading overhead 0.017675161361694336
+===== Pattern 0/1, proccessing 254 SQLs that belong to join pattern: ()
+  Running TreeBatchCext...
+	the overhead of enumerating all rows in mc is 0.8459322452545166 seconds.
+	bucketization overhead is 4.8160552978515625e-05. There are 4 buckets of dim 2
+	computing the result by the unified histogram takes 0.514399 seconds
+	[mc] computation overhead: 1.365166
+	the overhead of enumerating all rows in t is 0.4831981658935547 seconds.
+	bucketization overhead is 4.4345855712890625e-05. There are 36 buckets of dim 2
+	computing the result by the unified histogram takes 0.000563 seconds
+	[t] computation overhead: 0.484079
+	the overhead of enumerating all rows in mi_idx is 0.18655729293823242 seconds.
+	bucketization overhead is 1.621246337890625e-05. There are 4 buckets of dim 1
+	computing the result by the unified histogram takes 0.000253 seconds
+	[mi_idx] computation overhead: 0.187144
+	the overhead of enumerating all rows in mk is 0.8455789089202881 seconds.
+	bucketization overhead is 1.6689300537109375e-05. There are 5 buckets of dim 1
+	computing the result by the unified histogram takes 0.000294 seconds
+	[mk] computation overhead: 0.847553
+	the overhead of enumerating all rows in mi is 2.2881901264190674 seconds.
+	bucketization overhead is 1.5974044799804688e-05. There are 5 buckets of dim 1
+	computing the result by the unified histogram takes 0.000348 seconds
+	[mi] computation overhead: 2.288873
+	the overhead of enumerating all rows in ci is 5.811360597610474 seconds.
+	bucketization overhead is 1.71661376953125e-05. There are 5 buckets of dim 1
+	computing the result by the unified histogram takes 0.000267 seconds
+	[ci] computation overhead: 5.811940
+	optimization overhead: 0.818031
+	computation overhead: 11.807536 with 0 x Nones (which are at least 0.000000)
+total optimization overhead: 0.818031
+total computation overhead: 11.807536 with 0 x Nones (which are at least 0.000000)

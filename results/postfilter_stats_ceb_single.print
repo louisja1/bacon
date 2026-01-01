@@ -1,0 +1,13 @@
+total parsing overhead 0.3563709259033203
+total loading overhead 0.05039262771606445
+===== Pattern 0/1, proccessing 632 SQLs that belong to join pattern: ()
+	[b] computation overhead: 0.091333 with 0 x Nones (which are at least 0.000000)
+	[u] computation overhead: 0.206996 with 0 x Nones (which are at least 0.000000)
+	[c] computation overhead: 0.299808 with 0 x Nones (which are at least 0.000000)
+	[ph] computation overhead: 0.346570 with 0 x Nones (which are at least 0.000000)
+	[v] computation overhead: 0.367296 with 0 x Nones (which are at least 0.000000)
+	[p] computation overhead: 0.388193 with 0 x Nones (which are at least 0.000000)
+	[pl] computation overhead: 0.018429 with 0 x Nones (which are at least 0.000000)
+	[t] computation overhead: 0.000466 with 0 x Nones (which are at least 0.000000)
+	computation overhead: 1.719091 with 0 x Nones (which are at least 0.000000)
+total computation overhead: 1.719091 with 0 x Nones (which are at least 0.000000)

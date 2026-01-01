@@ -1,0 +1,20 @@
+{
+  "n_tables": 0.038051084841490224,
+  "n_queries": 0.08969980988730343,
+  "sum_base_table_size": 0.03695016658837013,
+  "max_base_table_size": 0.011104259650416542,
+  "mean_base_table_size": 0.03067569915945433,
+  "log_sum_intermediate_join_size": 0.1332901321000359,
+  "log_max_intermediate_join_size": 0.16908372330861204,
+  "log_mean_intermediate_join_size": 0.0882596520555222,
+  "sum_cost_of_scanning": 0.051474932751504186,
+  "max_cost_of_scanning": 0.031145102530282145,
+  "mean_cost_of_scanning": 0.04273638314422304,
+  "sum_number_of_selection_column": 0.042206415057089025,
+  "max_number_of_selection_column": 0.00920781807538378,
+  "mean_number_of_selection_column": 0.04062198594311408,
+  "prod_number_of_bucket": 0.06279079825279686,
+  "sum_query_coverage_ratio": 0.03650871300288379,
+  "max_query_coverage_ratio": 0.031271290618403905,
+  "mean_query_coverage_ratio": 0.05492203303311434
+}

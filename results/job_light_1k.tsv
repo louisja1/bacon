@@ -1,0 +1,19 @@
+pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext
+0	(('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	50	31.92959300000001	0	0.0	7.580784	0	0.0	28.103034
+1	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	74	40.345255000000016	0	0.0	381.824651	0	0.0	52.295842
+2	(('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	66	119.97445599999998	0	0.0	64.683614	0	0.0	26.700368
+3	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'))	3	106	777.0404330000001	0	0.0	182.848171	0	0.0	146.786568
+4	(('ci.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	82	689.8941190000002	0	0.0	481.548739	0	0.0	26.704572
+5	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	3	44	333.33875	0	0.0	68.81015	0	0.0	32.896165
+6	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	47	997.7274760000001	0	0.0	None	47	3600.0	57.067049
+7	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	103	232.36553600000005	0	0.0	None	103	3600.0	46.729173
+8	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	75	964.3078119999999	0	0.0	None	75	3600.0	165.9107
+9	(('ci.movie_id', '=', 't.id'),)	2	46	227.672883	0	0.0	36.42706	0	0.0	33.301658
+10	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	14	4.097969	0	0.0	1007.415856	0	0.0	15.886035
+11	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	4	40	291.740854	0	0.0	None	40	3600.0	177.570941
+12	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	32	26.255791000000002	0	0.0	765.202387	0	0.0	55.132685
+13	(('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	43	1165.200147	0	0.0	159.618812	0	0.0	21.975867
+14	(('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	49	51.719969000000006	0	0.0	14.92888	0	0.0	20.178861
+15	(('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	44	23.212962999999995	0	0.0	885.196798	0	0.0	43.615227
+16	(('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	30	74.36882499999999	0	0.0	432.37546	0	0.0	28.760436
+17	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	55	157.21486300000004	0	0.0	None	55	3600.0	38.980673

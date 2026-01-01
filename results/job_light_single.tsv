@@ -1,0 +1,8 @@
+pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext	sec_hybrid	switch_to_hybrid
+0	()	1	254	249.324267	0	0.0	12.993054	0	0.0	10.952344	11.807536	TreeBatchCext
+0(mc)	(mc)	1	43				0.390241	0	0.0	1.467756	1.365166	
+0(t)	(t)	1	70				1.95779	0	0.0	0.49666	0.484079	
+0(mi_idx)	(mi_idx)	1	26				0.252197	0	0.0	0.187602	0.187144	
+0(mk)	(mk)	1	42				0.743616	0	0.0	0.816778	0.847553	
+0(mi)	(mi)	1	38				2.749968	0	0.0	2.230977	2.288873	
+0(ci)	(ci)	1	35				6.899242	0	0.0	5.750082	5.81194	

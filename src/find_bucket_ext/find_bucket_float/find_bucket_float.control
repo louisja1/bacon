@@ -1,0 +1,4 @@
+comment = 'Fast C-based bucketization'
+default_version = '1.0'
+relocatable = true
+module_pathname = '$libdir/find_bucket_float'

@@ -1,0 +1,896 @@
+[
+  {
+    "n_tables": 2,
+    "n_queries": 43,
+    "base_table_sizes": [
+      2609129,
+      2528573
+    ],
+    "intermediate_join_sizes": [
+      2609129
+    ],
+    "costs_of_scanning": [
+      123244.11,
+      110361.78
+    ],
+    "numbers_of_selection_columns": [
+      2,
+      2
+    ],
+    "numbers_of_buckets": [
+      1,
+      1,
+      13,
+      1
+    ],
+    "sum_query_coverage_ratio": 158.76923076923077,
+    "max_query_coverage_ratio": 8.615384615384615,
+    "mean_query_coverage_ratio": 3.6923076923076916
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 24,
+    "base_table_sizes": [
+      1380035,
+      2528573,
+      2609129
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      3600689339515
+    ],
+    "costs_of_scanning": [
+      39761.39,
+      110361.78,
+      123244.11
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      3,
+      6,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 21.166666666666668,
+    "max_query_coverage_ratio": 1.5555555555555556,
+    "mean_query_coverage_ratio": 0.8819444444444445
+  },
+  {
+    "n_tables": 2,
+    "n_queries": 26,
+    "base_table_sizes": [
+      1380035,
+      2528573
+    ],
+    "intermediate_join_sizes": [
+      1380035
+    ],
+    "costs_of_scanning": [
+      39761.39,
+      110361.78
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      4,
+      8,
+      1
+    ],
+    "sum_query_coverage_ratio": 8.28125,
+    "max_query_coverage_ratio": 0.5625,
+    "mean_query_coverage_ratio": 0.31850961538461536
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 42,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      2609129
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      11803516956970
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78,
+      123244.11
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      3,
+      11,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 101.81818181818181,
+    "max_query_coverage_ratio": 5.8181818181818175,
+    "mean_query_coverage_ratio": 2.4242424242424243
+  },
+  {
+    "n_tables": 2,
+    "n_queries": 42,
+    "base_table_sizes": [
+      4523930,
+      2528573
+    ],
+    "intermediate_join_sizes": [
+      4523930
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      4,
+      12,
+      1
+    ],
+    "sum_query_coverage_ratio": 35.666666666666664,
+    "max_query_coverage_ratio": 2.708333333333333,
+    "mean_query_coverage_ratio": 0.8492063492063493
+  },
+  {
+    "n_tables": 2,
+    "n_queries": 38,
+    "base_table_sizes": [
+      14862084,
+      2528573
+    ],
+    "intermediate_join_sizes": [
+      14862084
+    ],
+    "costs_of_scanning": [
+      938377.83,
+      110361.78
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      4,
+      13,
+      1
+    ],
+    "sum_query_coverage_ratio": 18.53846153846154,
+    "max_query_coverage_ratio": 2.307692307692308,
+    "mean_query_coverage_ratio": 0.4878542510121457
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 50,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      67235027670120
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78,
+      938377.83
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      2,
+      11,
+      1,
+      3
+    ],
+    "sum_query_coverage_ratio": 51.28787878787878,
+    "max_query_coverage_ratio": 4.363636363636363,
+    "mean_query_coverage_ratio": 1.0257575757575756
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 30,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      1380035
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      6243181737550
+    ],
+    "costs_of_scanning": [
+      88116.45,
+      110361.78,
+      39761.39
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      6,
+      1,
+      2
+    ],
+    "sum_query_coverage_ratio": 25.916666666666668,
+    "max_query_coverage_ratio": 1.1666666666666667,
+    "mean_query_coverage_ratio": 0.863888888888889
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 52,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      14862084
+    ],
+    "intermediate_join_sizes": [
+      14862084,
+      38777094364836
+    ],
+    "costs_of_scanning": [
+      123244.11,
+      110361.78,
+      938377.83
+    ],
+    "numbers_of_selection_columns": [
+      2,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      1,
+      12,
+      1,
+      4
+    ],
+    "sum_query_coverage_ratio": 105.79166666666666,
+    "max_query_coverage_ratio": 5.416666666666666,
+    "mean_query_coverage_ratio": 2.034455128205128
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 36,
+    "base_table_sizes": [
+      36258540,
+      2528573,
+      4523930
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      164031096862200
+    ],
+    "costs_of_scanning": [
+      1701032.75,
+      110361.78,
+      112641.33
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      7,
+      1,
+      3
+    ],
+    "sum_query_coverage_ratio": 105.33333333333333,
+    "max_query_coverage_ratio": 6.095238095238095,
+    "mean_query_coverage_ratio": 2.9259259259259256
+  },
+  {
+    "n_tables": 2,
+    "n_queries": 35,
+    "base_table_sizes": [
+      36258540,
+      2528573
+    ],
+    "intermediate_join_sizes": [
+      36258540
+    ],
+    "costs_of_scanning": [
+      1701032.75,
+      110361.78
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      4,
+      14,
+      1
+    ],
+    "sum_query_coverage_ratio": 29.19642857142857,
+    "max_query_coverage_ratio": 2.6785714285714284,
+    "mean_query_coverage_ratio": 0.8341836734693877
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 34,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      36258540
+    ],
+    "intermediate_join_sizes": [
+      2609129,
+      94603208211660
+    ],
+    "costs_of_scanning": [
+      123244.11,
+      110361.78,
+      1701032.75
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      9,
+      4
+    ],
+    "sum_query_coverage_ratio": 23.444444444444443,
+    "max_query_coverage_ratio": 2.7777777777777777,
+    "mean_query_coverage_ratio": 0.6895424836601308
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 34,
+    "base_table_sizes": [
+      1380035,
+      2528573,
+      14862084
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      20510196092940
+    ],
+    "costs_of_scanning": [
+      39761.39,
+      110361.78,
+      938377.83
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      3,
+      7,
+      1,
+      4
+    ],
+    "sum_query_coverage_ratio": 5.238095238095238,
+    "max_query_coverage_ratio": 0.19047619047619047,
+    "mean_query_coverage_ratio": 0.15406162464985995
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 16,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      14862084,
+      1380035
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      20510196092940,
+      53513747421776445440
+    ],
+    "costs_of_scanning": [
+      123244.11,
+      110361.78,
+      938377.83,
+      39761.39
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      5,
+      1,
+      4,
+      2
+    ],
+    "sum_query_coverage_ratio": 6.1,
+    "max_query_coverage_ratio": 0.6,
+    "mean_query_coverage_ratio": 0.38125
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 20,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084,
+      1380035
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      6243181737550,
+      92786691410734055424
+    ],
+    "costs_of_scanning": [
+      88116.45,
+      110361.78,
+      938377.83,
+      39761.39
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      2,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      5,
+      1,
+      2,
+      2
+    ],
+    "sum_query_coverage_ratio": 9.35,
+    "max_query_coverage_ratio": 0.6,
+    "mean_query_coverage_ratio": 0.46749999999999997
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 32,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084,
+      2609129
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      67235027670120,
+      175424860509912530944
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78,
+      938377.83,
+      123244.11
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "numbers_of_buckets": [
+      2,
+      11,
+      2,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 53.772727272727266,
+    "max_query_coverage_ratio": 3.2727272727272725,
+    "mean_query_coverage_ratio": 1.680397727272727
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 12,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      36258540,
+      4523930
+    ],
+    "intermediate_join_sizes": [
+      2609129,
+      11803516956970,
+      427978291724975013888
+    ],
+    "costs_of_scanning": [
+      123244.11,
+      110361.78,
+      1701032.75,
+      112641.33
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      4,
+      1,
+      2
+    ],
+    "sum_query_coverage_ratio": 21.75,
+    "max_query_coverage_ratio": 3.75,
+    "mean_query_coverage_ratio": 1.8125
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 28,
+    "base_table_sizes": [
+      36258540,
+      2528573,
+      14862084
+    ],
+    "intermediate_join_sizes": [
+      14862084,
+      538877467197360
+    ],
+    "costs_of_scanning": [
+      1701032.75,
+      110361.78,
+      938377.83
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      7,
+      3
+    ],
+    "sum_query_coverage_ratio": 12.571428571428571,
+    "max_query_coverage_ratio": 0.7619047619047619,
+    "mean_query_coverage_ratio": 0.4489795918367347
+  },
+  {
+    "n_tables": 3,
+    "n_queries": 16,
+    "base_table_sizes": [
+      36258540,
+      2528573,
+      1380035
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      50038054248900
+    ],
+    "costs_of_scanning": [
+      690294.54,
+      110361.78,
+      39761.39
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      2,
+      1
+    ],
+    "numbers_of_buckets": [
+      5,
+      1,
+      2
+    ],
+    "sum_query_coverage_ratio": 15.9,
+    "max_query_coverage_ratio": 1.2,
+    "mean_query_coverage_ratio": 0.9937499999999999
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 12,
+    "base_table_sizes": [
+      36258540,
+      2528573,
+      14862084,
+      1380035
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      20510196092940,
+      743669765443708649472
+    ],
+    "costs_of_scanning": [
+      690294.54,
+      110361.78,
+      938377.83,
+      39761.39
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      4,
+      2,
+      2
+    ],
+    "sum_query_coverage_ratio": 3.3125,
+    "max_query_coverage_ratio": 0.3125,
+    "mean_query_coverage_ratio": 0.2760416666666667
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 16,
+    "base_table_sizes": [
+      36258540,
+      2528573,
+      14862084,
+      2609129
+    ],
+    "intermediate_join_sizes": [
+      2609129,
+      38777094364836,
+      1406000827111180599296
+    ],
+    "costs_of_scanning": [
+      1701032.75,
+      110361.78,
+      938377.83,
+      123244.11
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      6,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 26.333333333333336,
+    "max_query_coverage_ratio": 2.3333333333333335,
+    "mean_query_coverage_ratio": 1.6458333333333335
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 8,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      1380035,
+      4523930
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      6243181737550,
+      16289266523712094208
+    ],
+    "costs_of_scanning": [
+      59816.14,
+      110361.78,
+      39761.39,
+      88116.45
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "numbers_of_buckets": [
+      4,
+      1
+    ],
+    "sum_query_coverage_ratio": 7.5,
+    "max_query_coverage_ratio": 1.25,
+    "mean_query_coverage_ratio": 0.9375
+  },
+  {
+    "n_tables": 5,
+    "n_queries": 8,
+    "base_table_sizes": [
+      2609129,
+      2528573,
+      14862084,
+      1380035,
+      4523930
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      6243181737550,
+      92786691410734055424,
+      242092447373797122033844224
+    ],
+    "costs_of_scanning": [
+      59816.14,
+      110361.78,
+      938377.83,
+      39761.39,
+      88116.45
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "numbers_of_buckets": [
+      4,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 7.5,
+    "max_query_coverage_ratio": 1.25,
+    "mean_query_coverage_ratio": 0.9375
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 16,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084,
+      36258540
+    ],
+    "intermediate_join_sizes": [
+      4523930,
+      67235027670120,
+      2437843940178152914944
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78,
+      938377.83,
+      1701032.75
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      4,
+      2,
+      1
+    ],
+    "sum_query_coverage_ratio": 19.375,
+    "max_query_coverage_ratio": 2.5,
+    "mean_query_coverage_ratio": 1.2109375
+  },
+  {
+    "n_tables": 5,
+    "n_queries": 10,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084,
+      2609129,
+      36258540
+    ],
+    "intermediate_join_sizes": [
+      2609129,
+      11803516956970,
+      175424860509912530944,
+      6360649321793083792481583104
+    ],
+    "costs_of_scanning": [
+      112641.33,
+      110361.78,
+      938377.83,
+      123244.11,
+      1701032.75
+    ],
+    "numbers_of_selection_columns": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "numbers_of_buckets": [
+      1,
+      4,
+      1,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 24.5,
+    "max_query_coverage_ratio": 5.0,
+    "mean_query_coverage_ratio": 2.45
+  },
+  {
+    "n_tables": 4,
+    "n_queries": 10,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      1380035,
+      36258540
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      6243181737550,
+      226368654758226165760
+    ],
+    "costs_of_scanning": [
+      88116.45,
+      110361.78,
+      39761.39,
+      690294.54
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      2,
+      1,
+      0
+    ],
+    "numbers_of_buckets": [
+      3,
+      1,
+      2
+    ],
+    "sum_query_coverage_ratio": 10.166666666666666,
+    "max_query_coverage_ratio": 1.3333333333333333,
+    "mean_query_coverage_ratio": 1.0166666666666666
+  },
+  {
+    "n_tables": 5,
+    "n_queries": 6,
+    "base_table_sizes": [
+      4523930,
+      2528573,
+      14862084,
+      1380035,
+      36258540
+    ],
+    "intermediate_join_sizes": [
+      1380035,
+      6243181737550,
+      92786691410734055424,
+      3364309961983756878737309696
+    ],
+    "costs_of_scanning": [
+      88116.45,
+      110361.78,
+      938377.83,
+      39761.39,
+      690294.54
+    ],
+    "numbers_of_selection_columns": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "numbers_of_buckets": [
+      2,
+      1,
+      1
+    ],
+    "sum_query_coverage_ratio": 7.5,
+    "max_query_coverage_ratio": 1.5,
+    "mean_query_coverage_ratio": 1.25
+  }
+]
