@@ -37,8 +37,8 @@
 # python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_scale_batch1.json | tee ../results/tree_batch_cext_scale_batch1.print 
 # echo "16 ----------"
 # python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_job_light_batch5000.json | tee ../results/tree_batch_cext_job_light_batch5000.print 
-echo "17 ----------"
-python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_job_light_batch500000.json | tee ../results/tree_batch_cext_job_light_batch500000.print
+# echo "17 ----------"
+# python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_job_light_batch500000.json | tee ../results/tree_batch_cext_job_light_batch500000.print
 ### postfilter
 # echo "1 ----------"
 # python3 -u postfilter.py ../input_configs/postfilter_synthetic.json | tee ../results/postfilter_synthetic.print

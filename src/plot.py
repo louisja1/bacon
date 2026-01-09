@@ -24,10 +24,17 @@ datasets = [
     "scale",
     "job_light",
     "job_light_single",
+    "job_light_join",
     "stats_ceb",
     "stats_ceb_single",
     "stats_ceb_join",
     "dsb_grasp_20k",
+]
+
+scalability_datasets = [
+    "job_light_1k",
+    "job_light_2k",
+    "job_light_4k"
 ]
 
 
@@ -37,6 +44,12 @@ result_dir = "../results/"
 def load_aggregated_results():
     res = {}
     for dataset in datasets:
+        res[dataset] = pd.read_csv(result_dir + dataset + ".tsv", sep="\t")
+    return res
+
+def load_scalability_aggregated_results():
+    res = {}
+    for dataset in scalability_datasets:
         res[dataset] = pd.read_csv(result_dir + dataset + ".tsv", sep="\t")
     return res
 
@@ -277,7 +290,7 @@ def plot_ordered_runtime():
 def plot_per_workload_barplot():
     res = load_aggregated_results()
 
-    for dataset in ["scale"]:
+    for dataset in datasets:
         alg_to_overheads = {}
         alg_to_additional = {}
         for alg in [
@@ -294,7 +307,7 @@ def plot_per_workload_barplot():
 
             for i in range(num_rows):
                 _overhead = df.iloc[i]["sec_" + alg]
-                if _overhead == "None":
+                if _overhead == "None" or np.isnan(_overhead):
                     _overhead = 0.0
                 else:
                     _overhead = float(_overhead)
@@ -316,7 +329,7 @@ def plot_per_workload_barplot():
         N = alg_to_overheads["seq"].shape[0]
 
         width_per_bar = 0.5
-        fig, ax = plt.subplots(figsize=(N * width_per_bar, 3.3))
+        fig, ax = plt.subplots(figsize=(max(N, 7) * width_per_bar, 3.3))
 
         spacing = 2.0
         x = np.arange(N) * spacing
@@ -586,10 +599,157 @@ def plot_hybrid_per_pattern_barplot():
     # plt.tight_layout(pad=0.4)
     plt.savefig(f"../figures/hybrid_bar_per_join_pattern.png", dpi=300)
 
+def plot_scalability_per_workload_barplot():
+    res = load_scalability_aggregated_results()
+
+    for dataset in scalability_datasets:
+        alg_to_overheads = {}
+        alg_to_additional = {}
+        for alg in [
+            "seq",
+            "postfilter",
+            "tree_batch_cext",
+        ]:
+            alg_to_overheads[alg] = []
+            alg_to_additional[alg] = []
+            _df = res[dataset]
+            mask = _df["pattern_id"].astype(str).str.fullmatch(r"\d+")
+            df = _df[mask].reset_index(drop=True)
+            num_rows = len(df)
+
+            for i in range(num_rows):
+                _overhead = df.iloc[i]["sec_" + alg]
+                if _overhead == "None" or np.isnan(_overhead):
+                    _overhead = 0.0
+                else:
+                    _overhead = float(_overhead)
+                alg_to_overheads[alg].append(_overhead)
+                if alg != "tree_batch_cext" and alg != "hybrid":
+                    alg_to_additional[alg].append(
+                        float(df.iloc[i]["additional_at_least_" + alg])
+                    )
+                else:
+                    alg_to_additional[alg].append(0.0)
+            alg_to_overheads[alg] = np.array(alg_to_overheads[alg])
+            alg_to_additional[alg] = np.array(alg_to_additional[alg])
+
+        mask = res[dataset]["pattern_id"].astype(str).str.fullmatch(r"\d+")
+        df = res[dataset][mask].reset_index(drop=True)
+        sort_idx = np.argsort(df["n_tables"])
+        n_tables_per_pattern = df["n_tables"][sort_idx].reset_index(drop=True)
+
+        N = alg_to_overheads["seq"].shape[0]
+
+        width_per_bar = 0.5
+        fig, ax = plt.subplots(figsize=(N * width_per_bar, 3.3))
+
+        spacing = 2.0
+        x = np.arange(N) * spacing
+        bar_width = 0.4
+        offsets = [-bar_width, 0, bar_width]
+
+        for i, alg in enumerate(
+            [
+                "seq",
+                "postfilter",
+                "tree_batch_cext",
+            ]
+        ):
+            ax.bar(
+                x + offsets[i],
+                alg_to_overheads[alg][sort_idx],
+                bar_width,
+                color=colors[alg],
+                edgecolor="black",
+                linewidth=0.5,
+                label=f"{alg_to_formal_name[alg]}: runtime of avail. Qs",
+            )
+
+            ax.bar(
+                x + offsets[i],
+                alg_to_additional[alg][sort_idx],
+                bar_width,
+                bottom=alg_to_overheads[alg][sort_idx],
+                color=colors[alg],
+                edgecolor="black",
+                linewidth=0.5,
+                hatch="//",
+                label=f"{alg_to_formal_name[alg]}: min. runtime of unavail. Qs",
+            )
+
+        _diff = (
+            alg_to_overheads["tree_batch_cext"][sort_idx]
+            - alg_to_overheads["seq"][sort_idx]
+            - alg_to_additional["seq"][sort_idx]
+        )
+        top3_idx = np.argsort(_diff)[-3:][::-1]
+
+        print("Top 3 largest (tree_batch_cext - seq):")
+        for _i in top3_idx:
+            print(
+                f"\tpattern_id={_i}, original_pattern_id={sort_idx[_i]}, diff={_diff[_i]}"
+            )
+
+        _diff = (
+            alg_to_overheads["tree_batch_cext"][sort_idx]
+            - alg_to_overheads["postfilter"][sort_idx]
+            - alg_to_additional["postfilter"][sort_idx]
+        )
+        top3_idx = np.argsort(_diff)[-3:][::-1]
+
+        print("Top 3 largest (tree_batch_cext - postfilter):")
+        for _i in top3_idx:
+            print(
+                f"\tpattern_id={_i}, original_pattern_id={sort_idx[_i]}, diff={_diff[_i]}"
+            )
+
+        lst_i = 0
+        xx = []
+        xx_labels = []
+        for i in range(1, n_tables_per_pattern.shape[0]):
+            if n_tables_per_pattern[i] != n_tables_per_pattern[i - 1]:
+                xx.append(x[(lst_i + i) // 2])
+                xx_labels.append(f"{n_tables_per_pattern[i - 1]}-table JPs")
+                ax.axvline(
+                    x=(x[i] + x[i - 1]) * 0.5,
+                    color="black",
+                    linestyle="-",
+                    linewidth=0.8,
+                )
+                lst_i = i
+        xx.append(x[(lst_i + n_tables_per_pattern.shape[0] - 1) // 2])
+        xx_labels.append(
+            f"{n_tables_per_pattern[n_tables_per_pattern.shape[0] - 1]}-table JPs"
+        )
+
+        ax_top = ax.secondary_xaxis("top")
+        ax_top.tick_params(axis="x", length=0, width=0)
+        ax_top.set_xticks(xx)
+        ax_top.set_xticklabels(xx_labels)
+
+        ax.set_ylabel("LOG Runtime", fontsize=11)
+        ax.set_yscale("log")
+        ax.set_xlabel(
+            "Join Pattern Index (sorted by number of tables involved)", fontsize=11
+        )
+
+        ax.set_xlim(-1, (N - 1) * spacing + 1)
+        ax.tick_params(axis="y", labelsize=10)
+        tick_idx = np.arange(0, N, 5)
+        ax.set_xticks(x[tick_idx])
+        ax.set_xticklabels(tick_idx, fontsize=10)
+
+        ax.grid(True, axis="y", linestyle=":", linewidth=0.6, alpha=0.6)
+
+        ax.legend()
+
+        plt.tight_layout(pad=0.4)
+        plt.savefig(f"../figures/{dataset}_bar_per_join_pattern.png", dpi=300)
 
 if __name__ == "__main__":
     # plot_ordered_runtime()
     ### plot_cumulative_runtime()
     # plot_per_workload_barplot()
     # plot_model_importance("../models/20251230_075047_importance.txt")
-    plot_hybrid_per_pattern_barplot()
+    # plot_hybrid_per_pattern_barplot()
+    # plot_scalability_per_workload_barplot()
