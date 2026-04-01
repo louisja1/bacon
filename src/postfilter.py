@@ -11,6 +11,7 @@ import psycopg2
 
 from utility import parse_one_imdb_or_stats_or_dsb
 from db_connection import (
+    close_connection,
     run_conditional_aggregation, 
     get_latency,
     get_connection
@@ -26,6 +27,8 @@ def process_a_jp(
     dbname,
     timeout_in_sec,
     answer,
+    parallel_config=None,
+    materialized=False,
     # see why we need this in hybrid.py; 
     #     we do not use it by Postfilter itself, 
     #     and it set as None here
@@ -78,7 +81,8 @@ def process_a_jp(
                     counts = run_conditional_aggregation(
                         dbname=dbname, 
                         sql=sql, 
-                        timeout_in_sec=timeout_in_sec
+                        timeout_in_sec=timeout_in_sec,
+                        parallel_config=parallel_config,
                     )
                     # get the latency
                     latency, _ = get_latency(
@@ -87,6 +91,7 @@ def process_a_jp(
                         n_repetitions=1, 
                         extract_plan_info=True,
                         timeout_in_sec=timeout_in_sec,
+                        parallel_config=parallel_config,
                     )
                 except psycopg2.Error as e:
                     flag_for_timeout = True
@@ -112,7 +117,7 @@ def process_a_jp(
             total_latency += this_alias_latency
             n_none += this_alias_n_none
             additional_overhead_at_least += this_alias_additional_overhead_at_least
-    else:
+    elif not materialized:
         join_chunk = " AND ".join([
             f"{tmp[0]} {tmp[1]} {tmp[2]}" for tmp in list(jp.join_pattern)
         ])
@@ -146,7 +151,8 @@ def process_a_jp(
                 counts = run_conditional_aggregation(
                     dbname=dbname, 
                     sql=sql, 
-                    timeout_in_sec=timeout_in_sec
+                    timeout_in_sec=timeout_in_sec,
+                    parallel_config=parallel_config,
                 )
                 # get the latency
                 latency, _ = get_latency(
@@ -155,6 +161,7 @@ def process_a_jp(
                     n_repetitions=1, 
                     extract_plan_info=True,
                     timeout_in_sec=timeout_in_sec,
+                    parallel_config=parallel_config,
                 )
             except psycopg2.Error as e:
                 flag_for_timeout = True
@@ -169,6 +176,87 @@ def process_a_jp(
                     qid = workload_summary.id_to_qid[pattern_id][i]
                     answer[qid] = counts[i - st]
                 total_latency += latency
+    else:
+        # materialized version: we materialize the full join results, then do selection on top of it
+        join_chunk = " AND ".join([
+            f"{tmp[0]} {tmp[1]} {tmp[2]}" for tmp in list(jp.join_pattern)
+        ])
+        where_chunk = ", ".join([
+            f"{alias_to_tab[alias]} {alias}" 
+            for alias in alias_enumerate_order
+        ])
+        selection_chunk = []
+        selection_columns = set(list(workload_summary.id_to_cols_with_selection[pattern_id].keys()))
+        for qid in workload_summary.id_to_qid[pattern_id]:
+            if workload_summary.qid_to_selection[qid] == "":
+                selection_chunk.append("COUNT(*)")
+            else:
+                selection_chunk.append(
+                    f"COUNT(CASE WHEN "
+                    f"{workload_summary.qid_to_selection[qid].replace('.', '_')}"
+                     " THEN 1 END)"
+                )
+
+        conn, cursor = get_connection(dbname=dbname)
+        conn.autocommit = True
+        view_name = f"materialized_view_{pattern_id}"   
+
+        try:
+            view_creation_start_ts = time.time()
+            create_view_sql = f"CREATE MATERIALIZED VIEW {view_name} AS "\
+                    + f"SELECT "\
+                        + ", ".join(f"{_col} AS {_col.replace('.', '_')}" for _col in selection_columns) \
+                        + f" FROM {where_chunk} WHERE {join_chunk};"
+            cursor.execute(create_view_sql)
+            total_latency += time.time() - view_creation_start_ts
+
+            for k in range(0, len(selection_chunk), pg_limits_on_n_selections):
+                st = k
+                en = min(len(selection_chunk), k + pg_limits_on_n_selections)
+
+                this_selection_chunk = ", ".join(selection_chunk[st : en])
+                sql = "SELECT " + this_selection_chunk \
+                    + " FROM " + view_name + ";"
+                flag_for_timeout = False
+                latency = None
+                try:
+                    # get the count
+                    counts = run_conditional_aggregation(
+                        dbname=dbname, 
+                        sql=sql, 
+                        timeout_in_sec=timeout_in_sec,
+                        parallel_config=parallel_config,
+                    )
+                    # get the latency
+                    latency, _ = get_latency(
+                        dbname=dbname, 
+                        sql=sql, 
+                        n_repetitions=1, 
+                        extract_plan_info=True,
+                        timeout_in_sec=timeout_in_sec,
+                        parallel_config=parallel_config,
+                    )
+                except psycopg2.Error as e:
+                    flag_for_timeout = True
+                if flag_for_timeout:
+                    for i in range(st, en):
+                        qid = workload_summary.id_to_qid[pattern_id][i]
+                        answer[qid] = None
+                    n_none += len(workload_summary.id_to_qid[pattern_id])
+                    additional_overhead_at_least += timeout_in_sec
+                else:
+                    for i in range(st, en):
+                        qid = workload_summary.id_to_qid[pattern_id][i]
+                        answer[qid] = counts[i - st]
+                    total_latency += latency
+
+        finally:
+            view_drop_start_ts = time.time()
+            cursor.execute(f"DROP MATERIALIZED VIEW {view_name};")
+            total_latency += time.time() - view_drop_start_ts
+            close_connection(conn, cursor)
+
+
     return (
         total_latency,
         n_none,
@@ -191,6 +279,14 @@ if __name__ == "__main__":
             timeout_in_sec = config["timeout_in_sec"]
         else:
             timeout_in_sec = None
+        if "parallel" in config:
+            parallel_config = config["parallel"]
+        else:
+            parallel_config = None
+        if "materialized" in config:
+            materialized = config["materialized"]
+        else:
+            materialized = False
 
         if debug:
             path_to_output = dir_to_output + "postfilter_DEBUG.debug"
@@ -199,6 +295,10 @@ if __name__ == "__main__":
                 + path_to_sql.split("/")[-1].split(".sql")[0]
             if group_by == "query pattern":
                 path_to_output += "_byQP"
+            if parallel_config is not None:
+                path_to_output += "_parallel"
+            if materialized:
+                path_to_output += "_materialized"
             path_to_output += ".ans"
 
         info_at_the_beginning = \
@@ -302,7 +402,9 @@ if __name__ == "__main__":
                     alias_to_tab=alias_to_tab,
                     dbname=dbname,
                     timeout_in_sec=timeout_in_sec,
-                    answer=answer
+                    answer=answer,
+                    parallel_config=parallel_config,
+                    materialized=materialized,
                 )
                 print(
                     "\tcomputation overhead: "
@@ -323,6 +425,7 @@ if __name__ == "__main__":
                  "(which are at least "
                 f"{additional_overhead_at_least:.6f})"
             )
+            close_connection(conn, cursor)
             for qid in range(len(sqls)):
                 fout.write(f"{answer[qid]}\n")
 

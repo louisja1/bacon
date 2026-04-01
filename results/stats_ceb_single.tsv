@@ -1,0 +1,10 @@
+pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext	sec_hybrid	switch_to_hybrid	sec_seq_parallel	none_seq_parallel	additional_at_least_seq_parallel	sec_postfilter_parallel	none_postfilter_parallel	additional_at_least_postfilter_parallel	sec_tree_batch_cext_parallel
+0	()	1	632	17.808809000000025	0	0.0	1.719091	0	0.0	1.662298	2.214274	TreeBatchCext	16.626977000000004	0	0.0	1.262689	0	0.0	1.556079
+0(b)	(b)	1	79				0.091333	0	0.0	0.784461	0.546084					0.085773	0	0.0	0.686477
+0(u)	(u)	1	118				0.206996	0	0.0	0.065036	0.062723					0.202804	0	0.0	0.059652
+0(c)	(c)	1	102				0.299808	0	0.0	0.131768	0.131268					0.155256	0	0.0	0.130799
+0(ph)	(ph)	1	85				0.34657	0	0.0	0.233809	0.231236					0.182468	0	0.0	0.235324
+0(v)	(v)	1	94				0.367296	0	0.0	0.06814	0.068823					0.210163	0	0.0	0.073447
+0(p)	(p)	1	105				0.388193	0	0.0	0.139698	0.142984					0.407232	0	0.0	0.149917
+0(pl)	(pl)	1	44				0.018429	0	0.0	0.013417	0.014188					0.018493	0	0.0	0.014369
+0(t)	(t)	1	5				0.000466	0	0.0	0.200886	0.168209					0.0005	0	0.0	0.183507

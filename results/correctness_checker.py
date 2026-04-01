@@ -1,3 +1,4 @@
+## Postfilter Correctness Check
 # truth_files = [
 #     "seq_synthetic.ans",
 #     "seq_scale.ans",
@@ -41,49 +42,51 @@
 #     "../workload/job_light_4k.sql",
 # ]
 
-truth_files = [
-    "seq_synthetic.ans",
-    "seq_scale.ans",
-    "seq_job_light_join.ans",
-    "seq_job_light_single.ans",
-    "seq_stats_ceb.ans",
-    "seq_stats_ceb_single.ans",
-    "seq_stats_ceb_join.ans",
-    "seq_job_light.ans",
-    "seq_dsb_grasp_20k.ans",
-    "seq_job_light_1k.ans",
-    "seq_job_light_2k.ans",
-    "seq_job_light_4k.ans",
-]
-to_check_files = [
-    "tree_batch_cext_synthetic.ans",
-    "tree_batch_cext_scale.ans",
-    "tree_batch_cext_job_light_join.ans",
-    "tree_batch_cext_job_light_single.ans",
-    "tree_batch_cext_stats_ceb.ans",
-    "tree_batch_cext_stats_ceb_single.ans",
-    "tree_batch_cext_stats_ceb_join.ans",
-    "tree_batch_cext_job_light.ans",
-    "tree_batch_cext_dsb_grasp_20k.ans",
-    "tree_batch_cext_job_light_1k.ans",
-    "tree_batch_cext_job_light_2k.ans",
-    "tree_batch_cext_job_light_4k.ans",
-]
-workload_files = [
-    "../workload/synthetic.sql",
-    "../workload/scale.sql",
-    "../workload/job_light_join.sql",
-    "../workload/job_light_single.sql",
-    "../workload/stats_ceb.sql",
-    "../workload/stats_ceb_single.sql",
-    "../workload/stats_ceb_join.sql",
-    "../workload/job_light.sql",
-    "../workload/dsb_grasp_20k.sql",
-    "../workload/job_light_1k.sql",
-    "../workload/job_light_2k.sql",
-    "../workload/job_light_4k.sql",
-]
+## TreeBatchCext Correctness Check
+# truth_files = [
+#     "seq_synthetic.ans",
+#     "seq_scale.ans",
+#     "seq_job_light_join.ans",
+#     "seq_job_light_single.ans",
+#     "seq_stats_ceb.ans",
+#     "seq_stats_ceb_single.ans",
+#     "seq_stats_ceb_join.ans",
+#     "seq_job_light.ans",
+#     "seq_dsb_grasp_20k.ans",
+#     "seq_job_light_1k.ans",
+#     "seq_job_light_2k.ans",
+#     "seq_job_light_4k.ans",
+# ]
+# to_check_files = [
+#     "tree_batch_cext_synthetic.ans",
+#     "tree_batch_cext_scale.ans",
+#     "tree_batch_cext_job_light_join.ans",
+#     "tree_batch_cext_job_light_single.ans",
+#     "tree_batch_cext_stats_ceb.ans",
+#     "tree_batch_cext_stats_ceb_single.ans",
+#     "tree_batch_cext_stats_ceb_join.ans",
+#     "tree_batch_cext_job_light.ans",
+#     "tree_batch_cext_dsb_grasp_20k.ans",
+#     "tree_batch_cext_job_light_1k.ans",
+#     "tree_batch_cext_job_light_2k.ans",
+#     "tree_batch_cext_job_light_4k.ans",
+# ]
+# workload_files = [
+#     "../workload/synthetic.sql",
+#     "../workload/scale.sql",
+#     "../workload/job_light_join.sql",
+#     "../workload/job_light_single.sql",
+#     "../workload/stats_ceb.sql",
+#     "../workload/stats_ceb_single.sql",
+#     "../workload/stats_ceb_join.sql",
+#     "../workload/job_light.sql",
+#     "../workload/dsb_grasp_20k.sql",
+#     "../workload/job_light_1k.sql",
+#     "../workload/job_light_2k.sql",
+#     "../workload/job_light_4k.sql",
+# ]
 
+## Debug Correctness Check
 # truth_files = [
 #     # "seq_stats_ceb_join.ans",
 #     # "seq_stats_ceb_join.ans",
@@ -134,6 +137,125 @@ workload_files = [
 #     "../workload/stats_ceb_single.sql",
 #     "../workload/stats_ceb_join.sql",
 #     "../workload/job_light.sql",
+#     "../workload/dsb_grasp_20k.sql",
+# ]
+
+# ## TreeBatchCext Parallel Correctness Check
+# truth_files = [
+#     "seq_synthetic.ans",
+#     "seq_scale.ans",
+#     "seq_job_light_join.ans",
+#     "seq_job_light_single.ans",
+#     "seq_stats_ceb.ans",
+#     "seq_stats_ceb_single.ans",
+#     "seq_stats_ceb_join.ans",
+#     "seq_job_light.ans",
+#     "seq_dsb_grasp_20k.ans",
+# ]
+# to_check_files = [
+#     "tree_batch_cext_synthetic_parallel.ans",
+#     "tree_batch_cext_scale_parallel.ans",
+#     "tree_batch_cext_job_light_join_parallel.ans",
+#     "tree_batch_cext_job_light_single_parallel.ans",
+#     "tree_batch_cext_stats_ceb_parallel.ans",
+#     "tree_batch_cext_stats_ceb_single_parallel.ans",
+#     "tree_batch_cext_stats_ceb_join_parallel.ans",
+#     "tree_batch_cext_job_light_parallel.ans",
+#     "tree_batch_cext_dsb_grasp_20k_parallel.ans",
+# ]
+# workload_files = [
+#     "../workload/synthetic.sql",
+#     "../workload/scale.sql",
+#     "../workload/job_light_join.sql",
+#     "../workload/job_light_single.sql",
+#     "../workload/stats_ceb.sql",
+#     "../workload/stats_ceb_single.sql",
+#     "../workload/stats_ceb_join.sql",
+#     "../workload/job_light.sql",
+#     "../workload/dsb_grasp_20k.sql",
+# ]
+
+## TreeBatchCext Multiproc Correctness Check
+truth_files = [
+    "seq_synthetic.ans",
+    "seq_scale.ans",
+    "seq_job_light_join.ans",
+    "seq_job_light_single.ans",
+    "seq_stats_ceb.ans",
+    "seq_stats_ceb_single.ans",
+    "seq_stats_ceb_join.ans",
+    "seq_job_light.ans",
+    "seq_dsb_grasp_20k.ans",
+]
+to_check_files = [
+    "tree_batch_cext_synthetic_multiproc.ans",
+    "tree_batch_cext_scale_multiproc.ans",
+    "tree_batch_cext_job_light_join_multiproc.ans",
+    "tree_batch_cext_job_light_single_multiproc.ans",
+    "tree_batch_cext_stats_ceb_multiproc.ans",
+    "tree_batch_cext_stats_ceb_single_multiproc.ans",
+    "tree_batch_cext_stats_ceb_join_multiproc.ans",
+    "tree_batch_cext_job_light_multiproc.ans",
+    "tree_batch_cext_dsb_grasp_20k_multiproc.ans",
+]
+workload_files = [
+    "../workload/synthetic.sql",
+    "../workload/scale.sql",
+    "../workload/job_light_join.sql",
+    "../workload/job_light_single.sql",
+    "../workload/stats_ceb.sql",
+    "../workload/stats_ceb_single.sql",
+    "../workload/stats_ceb_join.sql",
+    "../workload/job_light.sql",
+    "../workload/dsb_grasp_20k.sql",
+]
+
+# ## Postfilter Parallel Correctness Check
+# truth_files = [
+#     "seq_synthetic.ans",
+#     "seq_scale.ans",
+#     "seq_job_light_join.ans",
+#     "seq_job_light_single.ans",
+#     "seq_stats_ceb.ans",
+#     "seq_stats_ceb_single.ans",
+#     "seq_stats_ceb_join.ans",
+#     "seq_job_light.ans",
+#     "seq_dsb_grasp_20k.ans",
+# ]
+# to_check_files = [
+#     "postfilter_synthetic_parallel.ans",
+#     "postfilter_scale_parallel.ans",
+#     "postfilter_job_light_join_parallel.ans",
+#     "postfilter_job_light_single_parallel.ans",
+#     "postfilter_stats_ceb_parallel.ans",
+#     "postfilter_stats_ceb_single_parallel.ans",
+#     "postfilter_stats_ceb_join_parallel.ans",
+#     "postfilter_job_light_parallel.ans",
+#     "postfilter_dsb_grasp_20k_parallel.ans",
+# ]
+# workload_files = [
+#     "../workload/synthetic.sql",
+#     "../workload/scale.sql",
+#     "../workload/job_light_join.sql",
+#     "../workload/job_light_single.sql",
+#     "../workload/stats_ceb.sql",
+#     "../workload/stats_ceb_single.sql",
+#     "../workload/stats_ceb_join.sql",
+#     "../workload/job_light.sql",
+#     "../workload/dsb_grasp_20k.sql",
+# ]
+
+# ## Postfilter Materialized Correctness Check
+# truth_files = [
+#     "seq_synthetic.ans",
+#     "seq_dsb_grasp_20k.ans",
+# ]
+# to_check_files = [
+#     "postfilter_synthetic_materialized.ans",
+#     "postfilter_dsb_grasp_20k_materialized.ans",
+# ]
+# workload_files = [
+#     "../workload/synthetic.sql",
 #     "../workload/dsb_grasp_20k.sql",
 # ]
 

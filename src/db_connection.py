@@ -20,13 +20,20 @@ def run_counting_sql(
     dbname, 
     sql, 
     disable_parallelism=True, 
-    timeout_in_sec=None
+    timeout_in_sec=None,
+    parallel_config=None,
 ):
     conn, cursor = get_connection(
         dbname=dbname, 
         autocommit=False
     )
-    if disable_parallelism:
+    if parallel_config is not None:
+        for param, value in parallel_config.items():
+            cursor.execute(
+                f"SET {param} = {value};"
+            )
+    else:
+        assert disable_parallelism, "If parallel_config is not provided, disable_parallelism should be True"
         cursor.execute(
             "SET max_parallel_workers_per_gather = 0;"
         )
@@ -43,13 +50,20 @@ def run_conditional_aggregation(
     dbname, 
     sql, 
     disable_parallelism=True, 
-    timeout_in_sec=None
+    timeout_in_sec=None,
+    parallel_config=None,
 ):
     conn, cursor = get_connection(
         dbname=dbname, 
         autocommit=False
     )
-    if disable_parallelism:
+    if parallel_config is not None:
+        for param, value in parallel_config.items():
+            cursor.execute(
+                f"SET {param} = {value};"
+            )
+    else:
+        assert disable_parallelism, "If parallel_config is not provided, disable_parallelism should be True"
         cursor.execute(
             "SET max_parallel_workers_per_gather = 0;"
         )
@@ -84,10 +98,17 @@ def get_latency(
     disable_parallelism=True, 
     print_n_rows=False, 
     extract_plan_info=False,
-    timeout_in_sec=None
+    timeout_in_sec=None,
+    parallel_config=None,
 ):
     conn, cursor = get_connection(dbname=dbname, autocommit=False)
-    if disable_parallelism:
+    if parallel_config is not None:
+        for param, value in parallel_config.items():
+            cursor.execute(
+                f"SET {param} = {value};"
+            )
+    else:
+        assert disable_parallelism, "If parallel_config is not provided, disable_parallelism should be True"
         cursor.execute("SET max_parallel_workers_per_gather = 0;")
     if timeout_in_sec is not None:
         cursor.execute(

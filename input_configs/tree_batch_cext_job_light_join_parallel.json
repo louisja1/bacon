@@ -1,0 +1,11 @@
+{
+    "path_to_sql": "../workload/job_light_join.sql",
+    "dir_to_output": "../results/",
+    "group_by": "join pattern",
+    "batch_size": 50000,
+    "parallel": {
+        "max_parallel_workers": 8,
+        "max_parallel_workers_per_gather": 4
+    },
+    "debug": false
+}

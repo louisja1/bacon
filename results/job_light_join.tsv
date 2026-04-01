@@ -1,28 +1,28 @@
-pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext	sec_hybrid	switch_to_hybrid
-0	(('mc.movie_id', '=', 't.id'),)	2	43	50.543126	0	0.0	2.918956	0	0.0	6.245402	4.574302	PostFilter
-1	(('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	24	18.840707	0	0.0	3.373853	0	0.0	24.827318	4.627445	PostFilter
-2	(('mi_idx.movie_id', '=', 't.id'),)	2	26	15.477716000000001	0	0.0	1.592922	0	0.0	3.075223	2.080176	PostFilter
-3	(('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	42	130.98154900000003	0	0.0	15.92163	0	0.0	26.911863	21.243275	PostFilter
-4	(('mk.movie_id', '=', 't.id'),)	2	42	54.49328499999998	0	0.0	3.835007	0	0.0	7.502014	5.139473	PostFilter
-5	(('mi.movie_id', '=', 't.id'),)	2	38	100.82523599999998	0	0.0	12.542812	0	0.0	23.89169	16.637851	PostFilter
-6	(('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	50	364.61122400000005	0	0.0	131.924822	0	0.0	36.998805	39.563571	TreeBatchCext
-7	(('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	30	46.79925899999999	0	0.0	6.067893	0	0.0	18.961334	8.067487	PostFilter
-8	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	3	52	212.73906000000002	0	0.0	48.326923	0	0.0	51.335174	58.070935	TreeBatchCext
-9	(('ci.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	36	683.7880529999999	0	0.0	81.168319	0	0.0	125.719595	111.748294	PostFilter
-10	(('ci.movie_id', '=', 't.id'),)	2	35	241.02429299999997	0	0.0	27.447634	0	0.0	53.278215	36.69778	PostFilter
-11	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'))	3	34	345.292928	0	0.0	36.498619	0	0.0	141.017515	47.38813	PostFilter
-12	(('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	34	85.05924200000001	0	0.0	13.025271	0	0.0	32.162864	17.385178	PostFilter
-13	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	16	51.78263000000001	0	0.0	54.050225	0	0.0	39.928363	44.87158	TreeBatchCext
-14	(('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	20	79.380824	0	0.0	175.041479	0	0.0	33.625543	40.206137	TreeBatchCext
-15	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	32	833.9273	0	0.0	2115.469991	0	0.0	45.367543	52.132417	TreeBatchCext
-16	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	12	206.064606	0	0.0	672.578874	0	0.0	134.715348	136.130945	TreeBatchCext
-17	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	3	28	308.40409999999997	0	0.0	132.125103	0	0.0	160.064871	175.857988	PostFilter
-18	(('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	16	52.40547499999999	0	0.0	14.461453	0	0.0	27.006265	19.374367	PostFilter
-19	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	12	61.527188	0	0.0	213.967082	0	0.0	35.142845	39.981427	TreeBatchCext
-20	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	4	16	342.841234	0	0.0	1177.745306	0	0.0	128.55533	131.437152	TreeBatchCext
-21	(('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	8	43.85608800000001	0	0.0	23.712113	0	0.0	23.715244	29.636299	TreeBatchCext
-22	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	8	125.37943100000001	0	0.0	2445.349104	0	0.0	32.556297	38.84146	TreeBatchCext
-23	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	16	854.1408040000001	0	0.0	None	16	3600.0	138.288832	136.492229	TreeBatchCext
-24	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	10	None	3	2700.0	None	10	3600.0	127.497667	126.867967	TreeBatchCext
-25	(('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	10	283.43328299999996	0	0.0	142.760068	0	0.0	27.873153	31.452447	TreeBatchCext
-26	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	6	307.269753	0	0.0	None	6	3600.0	33.812491	37.985798	TreeBatchCext
+pattern_id	join_pattern	n_tables	n_queries	sec_seq	none_seq	additional_at_least_seq	sec_postfilter	none_postfilter	additional_at_least_postfilter	sec_tree_batch_cext	sec_hybrid	switch_to_hybrid	sec_seq_parallel	none_seq_parallel	additional_at_least_seq_parallel	sec_postfilter_parallel	none_postfilter_parallel	additional_at_least_postfilter_parallel	sec_tree_batch_cext_parallel
+0	(('mc.movie_id', '=', 't.id'),)	2	43	50.543126	0	0.0	2.918956	0	0.0	6.245402	4.574302	PostFilter	17.691812000000002	0	0.0	1.154257	0	0.0	6.745406
+1	(('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	24	18.840707	0	0.0	3.373853	0	0.0	24.827318	4.627445	PostFilter	6.980103999999999	0	0.0	1.39428	0	0.0	30.471845
+2	(('mi_idx.movie_id', '=', 't.id'),)	2	26	15.477716000000001	0	0.0	1.592922	0	0.0	3.075223	2.080176	PostFilter	4.900358000000001	0	0.0	0.854219	0	0.0	3.164626
+3	(('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	42	130.98154900000003	0	0.0	15.92163	0	0.0	26.911863	21.243275	PostFilter	36.349230000000006	0	0.0	5.610451	0	0.0	31.098251
+4	(('mk.movie_id', '=', 't.id'),)	2	42	54.49328499999998	0	0.0	3.835007	0	0.0	7.502014	5.139473	PostFilter	15.494160999999998	0	0.0	1.461281	0	0.0	6.681401
+5	(('mi.movie_id', '=', 't.id'),)	2	38	100.82523599999998	0	0.0	12.542812	0	0.0	23.89169	16.637851	PostFilter	30.772219999999997	0	0.0	3.904266	0	0.0	24.852691
+6	(('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	50	364.61122400000005	0	0.0	131.924822	0	0.0	36.998805	39.563571	TreeBatchCext	86.57552700000001	0	0.0	36.584322	0	0.0	37.46534
+7	(('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	30	46.79925899999999	0	0.0	6.067893	0	0.0	18.961334	8.067487	PostFilter	17.147749000000005	0	0.0	2.369987	0	0.0	22.280677
+8	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	3	52	212.73906000000002	0	0.0	48.326923	0	0.0	51.335174	58.070935	TreeBatchCext	74.33214600000001	0	0.0	14.898303	0	0.0	53.005749
+9	(('ci.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	3	36	683.7880529999999	0	0.0	81.168319	0	0.0	125.719595	111.748294	PostFilter	135.79116199999999	0	0.0	23.816655	0	0.0	64.96988
+10	(('ci.movie_id', '=', 't.id'),)	2	35	241.02429299999997	0	0.0	27.447634	0	0.0	53.278215	36.69778	PostFilter	58.97624600000002	0	0.0	8.385457	0	0.0	57.197073
+11	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'))	3	34	345.292928	0	0.0	36.498619	0	0.0	141.017515	47.38813	PostFilter	92.45100300000001	0	0.0	10.950594	0	0.0	80.64447
+12	(('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	34	85.05924200000001	0	0.0	13.025271	0	0.0	32.162864	17.385178	PostFilter	36.029882	0	0.0	3.982672	0	0.0	33.422728
+13	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	16	51.78263000000001	0	0.0	54.050225	0	0.0	39.928363	44.87158	TreeBatchCext	21.717117000000002	0	0.0	15.587537	0	0.0	42.737209
+14	(('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	20	79.380824	0	0.0	175.041479	0	0.0	33.625543	40.206137	TreeBatchCext	33.522102	0	0.0	48.279231	0	0.0	36.867323
+15	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	32	833.9273	0	0.0	2115.469991	0	0.0	45.367543	52.132417	TreeBatchCext	208.218294	0	0.0	557.449768	0	0.0	47.955612
+16	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	12	206.064606	0	0.0	672.578874	0	0.0	134.715348	136.130945	TreeBatchCext	48.911424	0	0.0	182.997443	0	0.0	73.499091
+17	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	3	28	308.40409999999997	0	0.0	132.125103	0	0.0	160.064871	175.857988	PostFilter	78.840158	0	0.0	39.142393	0	0.0	100.295507
+18	(('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	3	16	52.40547499999999	0	0.0	14.461453	0	0.0	27.006265	19.374367	PostFilter	16.893607	0	0.0	5.848098	0	0.0	30.503622
+19	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'))	4	12	61.527188	0	0.0	213.967082	0	0.0	35.142845	39.981427	TreeBatchCext	22.675579	0	0.0	64.637339	0	0.0	38.207357
+20	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'))	4	16	342.841234	0	0.0	1177.745306	0	0.0	128.55533	131.437152	TreeBatchCext	108.11733499999998	0	0.0	332.919159	0	0.0	72.491792
+21	(('mc.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	8	43.85608800000001	0	0.0	23.712113	0	0.0	23.715244	29.636299	TreeBatchCext	11.649104000000001	0	0.0	7.938312	0	0.0	27.281951
+22	(('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	8	125.37943100000001	0	0.0	2445.349104	0	0.0	32.556297	38.84146	TreeBatchCext	23.638977999999998	0	0.0	668.634061	0	0.0	35.339535
+23	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	16	854.1408040000001	0	0.0	None	16	3600.0	138.288832	136.492229	TreeBatchCext	163.50392300000001	0	0.0	2542.145496	0	0.0	75.870443
+24	(('ci.movie_id', '=', 't.id'), ('mc.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	10	None	3	2700.0	None	10	3600.0	127.497667	126.867967	TreeBatchCext	1083.411181	0	0.0	None	10	3600.0	71.766303
+25	(('ci.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	4	10	283.43328299999996	0	0.0	142.760068	0	0.0	27.873153	31.452447	TreeBatchCext	69.644091	0	0.0	34.268737	0	0.0	31.904047
+26	(('ci.movie_id', '=', 't.id'), ('mi.movie_id', '=', 't.id'), ('mi_idx.movie_id', '=', 't.id'), ('mk.movie_id', '=', 't.id'))	5	6	307.269753	0	0.0	None	6	3600.0	33.812491	37.985798	TreeBatchCext	91.2281	0	0.0	2981.700591	0	0.0	37.849771

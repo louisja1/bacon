@@ -13,13 +13,15 @@ def process_a_sql(
     sql,
     dbname,
     timeout_in_sec,
+    parallel_config=None,
 ):
     try:
         # get the count
         count = run_counting_sql(
             dbname=dbname, 
             sql=sql, 
-            timeout_in_sec=timeout_in_sec
+            timeout_in_sec=timeout_in_sec,
+            parallel_config=parallel_config,
         )
         # get the latency
         latency, plan_info = get_latency(
@@ -27,7 +29,8 @@ def process_a_sql(
             sql=sql, 
             n_repetitions=1, 
             extract_plan_info=True, 
-            timeout_in_sec=timeout_in_sec
+            timeout_in_sec=timeout_in_sec,
+            parallel_config=parallel_config,
         )
         return False, count, latency, plan_info
     except psycopg2.Error as e:
@@ -51,13 +54,20 @@ if __name__ == "__main__":
             timeout_in_sec = config["timeout_in_sec"]
         else:
             timeout_in_sec = None
+        if "parallel" in config:
+            parallel_config = config["parallel"]
+        else:
+            parallel_config = None
 
         if debug:
             path_to_output = dir_to_output\
                 + "seq_DEBUG.debug"
         else:
             path_to_output = dir_to_output + "seq_"\
-                + path_to_sql.split("/")[-1].split(".sql")[0] + ".ans"
+                + path_to_sql.split("/")[-1].split(".sql")[0] 
+            if parallel_config is not None:
+                path_to_output += "_parallel"
+            path_to_output += ".ans"
 
         info_at_the_beginning = \
             f"#timestamp:{datetime.now()}\n#header:count,secs,plan_info\n"
@@ -92,7 +102,8 @@ if __name__ == "__main__":
                         ) = process_a_sql(
                             sql=sql,
                             dbname=dbname,
-                            timeout_in_sec=timeout_in_sec
+                            timeout_in_sec=timeout_in_sec,
+                            parallel_config=parallel_config,
                         ) 
                         if is_timeout:
                             fout.write("None,None,None\n")

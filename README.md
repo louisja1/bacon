@@ -21,6 +21,9 @@ Some enviroment-dependant setups:
 
 Other algorithms are named clearly.
 
+## Parallelization
+`tree_batch_cext_multiproc.py` is the simple parallelization strategy we proposed for our algorithm.
+
 ## Repository Structure
 `figures/` contains the figures used in the paper. And the script for plotting is `src/plot.py`.
 

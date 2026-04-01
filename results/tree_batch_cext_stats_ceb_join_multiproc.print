@@ -1,0 +1,243 @@
+total parsing overhead 4.181605100631714
+total loading overhead 0.2729167938232422
+[worker 0][pid 504660] finished processing pattern 0 in
+	computation overhead: 0.984353
+[worker 3][pid 504664] finished processing pattern 3 in
+	computation overhead: 1.412344
+[worker 1][pid 504661] finished processing pattern 1 in
+	computation overhead: 1.628985
+[worker 2][pid 504663] finished processing pattern 2 in
+	computation overhead: 1.949145
+[worker 2][pid 504663] finished processing pattern 6 in
+	computation overhead: 0.062424
+[worker 0][pid 504660] finished processing pattern 4 in
+	computation overhead: 1.065360
+[worker 3][pid 504664] finished processing pattern 7 in
+	computation overhead: 1.036790
+[worker 0][pid 504660] finished processing pattern 8 in
+	computation overhead: 0.485997
+[worker 1][pid 504661] finished processing pattern 5 in
+	computation overhead: 0.971786
+[worker 2][pid 504663] finished processing pattern 10 in
+	computation overhead: 0.708362
+[worker 2][pid 504663] finished processing pattern 14 in
+	computation overhead: 0.109948
+[worker 0][pid 504660] finished processing pattern 12 in
+	computation overhead: 0.325444
+[worker 3][pid 504664] finished processing pattern 11 in
+	computation overhead: 0.433724
+[worker 3][pid 504664] finished processing pattern 15 in
+	computation overhead: 0.005404
+[worker 0][pid 504660] finished processing pattern 16 in
+	computation overhead: 0.651557
+[worker 3][pid 504664] finished processing pattern 19 in
+	computation overhead: 0.814325
+[worker 2][pid 504663] finished processing pattern 18 in
+	computation overhead: 1.371053
+[worker 2][pid 504663] finished processing pattern 22 in
+	computation overhead: 0.117064
+[worker 3][pid 504664] finished processing pattern 23 in
+	computation overhead: 0.625648
+[worker 1][pid 504661] finished processing pattern 9 in
+	computation overhead: 2.218954
+[worker 2][pid 504663] finished processing pattern 26 in
+	computation overhead: 0.879740
+[worker 1][pid 504661] finished processing pattern 13 in
+	computation overhead: 0.627679
+[worker 3][pid 504664] finished processing pattern 27 in
+	computation overhead: 1.553288
+[worker 1][pid 504661] finished processing pattern 17 in
+	computation overhead: 0.523362
+[worker 0][pid 504660] finished processing pattern 20 in
+	computation overhead: 2.538940
+[worker 3][pid 504664] finished processing pattern 31 in
+	computation overhead: 0.794306
+[worker 1][pid 504661] finished processing pattern 21 in
+	computation overhead: 0.893507
+[worker 2][pid 504663] finished processing pattern 30 in
+	computation overhead: 1.664824
+[worker 0][pid 504660] finished processing pattern 24 in
+	computation overhead: 1.010892
+[worker 0][pid 504660] finished processing pattern 28 in
+	computation overhead: 0.917848
+[worker 1][pid 504661] finished processing pattern 25 in
+	computation overhead: 2.180061
+[worker 1][pid 504661] finished processing pattern 29 in
+	computation overhead: 0.066122
+[worker 3][pid 504664] finished processing pattern 35 in
+	computation overhead: 2.516651
+[worker 2][pid 504663] finished processing pattern 34 in
+	computation overhead: 2.511968
+[worker 0][pid 504660] finished processing pattern 32 in
+	computation overhead: 1.428770
+[worker 3][pid 504664] finished processing pattern 39 in
+	computation overhead: 0.807040
+[worker 1][pid 504661] finished processing pattern 33 in
+	computation overhead: 0.894743
+[worker 0][pid 504660] finished processing pattern 36 in
+	computation overhead: 0.803931
+[worker 2][pid 504663] finished processing pattern 38 in
+	computation overhead: 0.941987
+[worker 1][pid 504661] finished processing pattern 37 in
+	computation overhead: 0.831037
+[worker 3][pid 504664] finished processing pattern 43 in
+	computation overhead: 1.677166
+[worker 1][pid 504661] finished processing pattern 41 in
+	computation overhead: 1.738043
+[worker 0][pid 504660] finished processing pattern 40 in
+	computation overhead: 2.532833
+[worker 3][pid 504664] finished processing pattern 47 in
+	computation overhead: 1.061317
+[worker 2][pid 504663] finished processing pattern 42 in
+	computation overhead: 2.711249
+[worker 1][pid 504661] finished processing pattern 45 in
+	computation overhead: 1.071890
+[worker 3][pid 504664] finished processing pattern 51 in
+	computation overhead: 1.173764
+[worker 2][pid 504663] finished processing pattern 46 in
+	computation overhead: 1.299073
+[worker 0][pid 504660] finished processing pattern 44 in
+	computation overhead: 1.846962
+[worker 3][pid 504664] finished processing pattern 55 in
+	computation overhead: 0.903594
+[worker 1][pid 504661] finished processing pattern 49 in
+	computation overhead: 1.274305
+[worker 2][pid 504663] finished processing pattern 50 in
+	computation overhead: 1.626434
+[worker 1][pid 504661] finished processing pattern 53 in
+	computation overhead: 1.154511
+[worker 1][pid 504661] finished processing pattern 57 in
+	computation overhead: 0.707104
+[worker 3][pid 504664] finished processing pattern 59 in
+	computation overhead: 2.004894
+[worker 2][pid 504663] finished processing pattern 54 in
+	computation overhead: 0.926178
+[worker 1][pid 504661] finished processing pattern 61 in
+	computation overhead: 0.441884
+[worker 3][pid 504664] finished processing pattern 63 in
+	computation overhead: 0.890082
+[worker 1][pid 504661] finished processing pattern 65 in
+	computation overhead: 0.807596
+[worker 0][pid 504660] finished processing pattern 48 in
+	computation overhead: 3.700157
+[worker 2][pid 504663] finished processing pattern 58 in
+	computation overhead: 1.491662
+[worker 3][pid 504664] finished processing pattern 67 in
+	computation overhead: 0.769531
+[worker 2][pid 504663] finished processing pattern 62 in
+	computation overhead: 0.482574
+[worker 1][pid 504661] finished processing pattern 69 in
+	computation overhead: 1.145880
+[worker 3][pid 504664] finished processing pattern 71 in
+	computation overhead: 0.950634
+[worker 0][pid 504660] finished processing pattern 52 in
+	computation overhead: 1.374382
+[worker 2][pid 504663] finished processing pattern 66 in
+	computation overhead: 0.930032
+[worker 1][pid 504661] finished processing pattern 73 in
+	computation overhead: 0.913996
+[worker 0][pid 504660] finished processing pattern 56 in
+	computation overhead: 1.021098
+[worker 2][pid 504663] finished processing pattern 70 in
+	computation overhead: 1.006651
+[worker 1][pid 504661] finished processing pattern 77 in
+	computation overhead: 1.567201
+[worker 2][pid 504663] finished processing pattern 74 in
+	computation overhead: 1.313146
+[worker 0][pid 504660] finished processing pattern 60 in
+	computation overhead: 1.455498
+[worker 3][pid 504664] finished processing pattern 75 in
+	computation overhead: 2.987176
+[worker 0][pid 504660] finished processing pattern 64 in
+	computation overhead: 0.802431
+[worker 2][pid 504663] finished processing pattern 78 in
+	computation overhead: 1.448239
+[worker 1][pid 504661] finished processing pattern 81 in
+	computation overhead: 1.960936
+[worker 0][pid 504660] finished processing pattern 68 in
+	computation overhead: 0.934305
+[worker 2][pid 504663] finished processing pattern 82 in
+	computation overhead: 0.676202
+[worker 3][pid 504664] finished processing pattern 79 in
+	computation overhead: 2.042007
+[worker 0][pid 504660] finished processing pattern 72 in
+	computation overhead: 1.171350
+[worker 3][pid 504664] finished processing pattern 83 in
+	computation overhead: 1.519665
+[worker 1][pid 504661] finished processing pattern 85 in
+	computation overhead: 3.113120
+[worker 2][pid 504663] finished processing pattern 86 in
+	computation overhead: 3.119029
+[worker 0][pid 504660] finished processing pattern 76 in
+	computation overhead: 2.696934
+[worker 1][pid 504661] finished processing pattern 89 in
+	computation overhead: 1.194040
+[worker 3][pid 504664] finished processing pattern 87 in
+	computation overhead: 2.485651
+[worker 0][pid 504660] finished processing pattern 80 in
+	computation overhead: 2.000812
+[worker 2][pid 504663] finished processing pattern 90 in
+	computation overhead: 2.432315
+[worker 3][pid 504664] finished processing pattern 91 in
+	computation overhead: 1.440893
+[worker 0][pid 504660] finished processing pattern 84 in
+	computation overhead: 1.436377
+[worker 3][pid 504664] finished processing pattern 95 in
+	computation overhead: 1.542351
+[worker 1][pid 504661] finished processing pattern 93 in
+	computation overhead: 4.625637
+[worker 0][pid 504660] finished processing pattern 88 in
+	computation overhead: 2.380749
+[worker 2][pid 504663] finished processing pattern 94 in
+	computation overhead: 3.894343
+[worker 1][pid 504661] finished processing pattern 97 in
+	computation overhead: 2.630859
+[worker 3][pid 504664] finished processing pattern 99 in
+	computation overhead: 4.084521
+[worker 0][pid 504660] finished processing pattern 92 in
+	computation overhead: 2.099311
+[worker 2][pid 504663] finished processing pattern 98 in
+	computation overhead: 2.160583
+[worker 0][pid 504660] finished processing pattern 96 in
+	computation overhead: 1.899901
+[worker 1][pid 504661] finished processing pattern 101 in
+	computation overhead: 2.880149
+[worker 3][pid 504664] finished processing pattern 103 in
+	computation overhead: 2.928885
+[worker 2][pid 504663] finished processing pattern 102 in
+	computation overhead: 2.853187
+[worker 0][pid 504660] finished processing pattern 100 in
+	computation overhead: 2.855571
+[worker 3][pid 504664] finished processing pattern 107 in
+	computation overhead: 2.458225
+[worker 1][pid 504661] finished processing pattern 105 in
+	computation overhead: 4.387064
+[worker 2][pid 504663] finished processing pattern 106 in
+	computation overhead: 3.955862
+[worker 3][pid 504664] finished processing pattern 111 in
+	computation overhead: 3.012956
+[worker 0][pid 504660] finished processing pattern 104 in
+	computation overhead: 3.760927
+[worker 2][pid 504663] finished processing pattern 110 in
+	computation overhead: 1.750991
+[worker 1][pid 504661] finished processing pattern 109 in
+	computation overhead: 2.002605
+[worker 3][pid 504664] finished processing pattern 115 in
+	computation overhead: 1.170362
+[worker 0][pid 504660] finished processing pattern 108 in
+	computation overhead: 1.359340
+[worker 1][pid 504661] finished processing pattern 113 in
+	computation overhead: 1.354350
+[worker 2][pid 504663] finished processing pattern 114 in
+	computation overhead: 1.639087
+[worker 3][pid 504664] finished processing pattern 119 in
+	computation overhead: 2.289399
+[worker 1][pid 504661] finished processing pattern 117 in
+	computation overhead: 1.775731
+[worker 0][pid 504660] finished processing pattern 112 in
+	computation overhead: 2.120903
+[worker 2][pid 504663] finished processing pattern 118 in
+	computation overhead: 2.012456
+[worker 0][pid 504660] finished processing pattern 116 in
+	computation overhead: 1.917363
+total computation overhead: 49.656400

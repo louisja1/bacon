@@ -1,0 +1,5 @@
+total parsing overhead 0.34833621978759766
+total loading overhead 0.045914411544799805
+[worker 0][pid 504325] finished processing pattern 0 in
+	computation overhead: 1.562315
+total computation overhead: 1.610870

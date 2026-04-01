@@ -39,6 +39,44 @@
 # python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_job_light_batch5000.json | tee ../results/tree_batch_cext_job_light_batch5000.print 
 # echo "17 ----------"
 # python3 -u tree_batch_cext.py ../input_configs/tree_batch_cext_job_light_batch500000.json | tee ../results/tree_batch_cext_job_light_batch500000.print
+### tree_batch_cext parallel
+# echo "1 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_synthetic_parallel.json | tee ../results/tree_batch_cext_synthetic_parallel.print
+# echo "2 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_scale_parallel.json | tee ../results/tree_batch_cext_scale_parallel.print 
+# echo "3 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_job_light_single_parallel.json | tee ../results/tree_batch_cext_job_light_single_parallel.print
+# echo "4 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_job_light_join_parallel.json | tee ../results/tree_batch_cext_job_light_join_parallel.print 
+# echo "5 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_stats_ceb_single_parallel.json | tee ../results/tree_batch_cext_stats_ceb_single_parallel.print 
+# echo "6 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_stats_ceb_join_parallel.json | tee ../results/tree_batch_cext_stats_ceb_join_parallel.print 
+# echo "7 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_stats_ceb_parallel.json | tee ../results/tree_batch_cext_stats_ceb_parallel.print
+# echo "8 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_job_light_parallel.json | tee ../results/tree_batch_cext_job_light_parallel.print
+# echo "9 ----------"
+# python3 -u tree_batch_cext_parallel.py ../input_configs/tree_batch_cext_dsb_grasp_20k_parallel.json | tee ../results/tree_batch_cext_dsb_grasp_20k_parallel.print
+### tree_batch_cext multiproc
+echo "1 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_synthetic_multiproc.json | tee ../results/tree_batch_cext_synthetic_multiproc.print
+echo "2 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_scale_multiproc.json | tee ../results/tree_batch_cext_scale_multiproc.print 
+echo "3 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_job_light_single_multiproc.json | tee ../results/tree_batch_cext_job_light_single_multiproc.print
+echo "4 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_job_light_join_multiproc.json | tee ../results/tree_batch_cext_job_light_join_multiproc.print 
+echo "5 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_stats_ceb_single_multiproc.json | tee ../results/tree_batch_cext_stats_ceb_single_multiproc.print 
+echo "6 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_stats_ceb_join_multiproc.json | tee ../results/tree_batch_cext_stats_ceb_join_multiproc.print 
+echo "7 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_stats_ceb_multiproc.json | tee ../results/tree_batch_cext_stats_ceb_multiproc.print
+# echo "8 ----------"
+# python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_job_light_multiproc.json | tee ../results/tree_batch_cext_job_light_multiproc.print
+echo "9 ----------"
+python3 -u tree_batch_cext_multiproc.py ../input_configs/tree_batch_cext_dsb_grasp_20k_multiproc.json | tee ../results/tree_batch_cext_dsb_grasp_20k_multiproc.print
 ### postfilter
 # echo "1 ----------"
 # python3 -u postfilter.py ../input_configs/postfilter_synthetic.json | tee ../results/postfilter_synthetic.print
@@ -64,6 +102,30 @@
 # python3 -u postfilter.py ../input_configs/postfilter_job_light_2k.json | tee ../results/postfilter_job_light_2k.print
 # echo "12 ----------"
 # python3 -u postfilter.py ../input_configs/postfilter_job_light_4k.json | tee ../results/postfilter_job_light_4k.print
+### postfilter parallel
+# echo "1 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_synthetic_parallel.json | tee ../results/postfilter_synthetic_parallel.print
+# echo "2 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_scale_parallel.json | tee ../results/postfilter_scale_parallel.print 
+# echo "3 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_job_light_single_parallel.json | tee ../results/postfilter_job_light_single_parallel.print
+# echo "4 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_job_light_join_parallel.json | tee ../results/postfilter_job_light_join_parallel.print 
+# echo "5 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_stats_ceb_single_parallel.json | tee ../results/postfilter_stats_ceb_single_parallel.print 
+# echo "6 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_stats_ceb_join_parallel.json | tee ../results/postfilter_stats_ceb_join_parallel.print 
+# echo "7 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_stats_ceb_parallel.json | tee ../results/postfilter_stats_ceb_parallel.print 
+# echo "8 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_dsb_grasp_20k_parallel.json | tee ../results/postfilter_dsb_grasp_20k_parallel.print
+# echo "9 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_job_light_parallel.json | tee ../results/postfilter_job_light_parallel.print
+### postfilter materialized
+# echo "1 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_synthetic_materialized.json | tee ../results/postfilter_synthetic_materialized.print
+# echo "8 ----------"
+# python3 -u postfilter.py ../input_configs/postfilter_dsb_grasp_20k_materialized.json | tee ../results/postfilter_dsb_grasp_20k_materialized.print
 ### sequential_processing
 # echo "1 ----------"
 # python3 -u sequential_processing.py ../input_configs/seq_synthetic.json
@@ -89,6 +151,25 @@
 # python3 -u sequential_processing.py ../input_configs/seq_job_light_2k.json 
 # echo "12 ----------"
 # python3 -u sequential_processing.py ../input_configs/seq_job_light_4k.json 
+### sequential_processing parallel
+# echo "1 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_synthetic_parallel.json
+# echo "2 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_scale_parallel.json
+# echo "3 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_job_light_single_parallel.json
+# echo "4 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_job_light_join_parallel.json
+# echo "5 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_stats_ceb_single_parallel.json 
+# echo "6 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_stats_ceb_join_parallel.json
+# echo "7 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_stats_ceb_parallel.json 
+# echo "8 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_dsb_grasp_20k_parallel.json 
+# echo "9 ----------"
+# python3 -u sequential_processing.py ../input_configs/seq_job_light_parallel.json 
 ### hybrid
 # echo "1 ----------"
 # python3 -u hybrid.py ../input_configs/hybrid_synthetic.json | tee ../results/hybrid_synthetic.print

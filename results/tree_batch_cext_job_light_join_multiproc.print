@@ -1,0 +1,57 @@
+total parsing overhead 0.6912202835083008
+total loading overhead 0.0612947940826416
+[worker 2][pid 481982] finished processing pattern 2 in
+	computation overhead: 4.078878
+[worker 0][pid 481979] finished processing pattern 0 in
+	computation overhead: 6.913747
+[worker 0][pid 481979] finished processing pattern 4 in
+	computation overhead: 7.358352
+[worker 1][pid 481980] finished processing pattern 1 in
+	computation overhead: 25.144340
+[worker 3][pid 481984] finished processing pattern 3 in
+	computation overhead: 28.230678
+[worker 2][pid 481982] finished processing pattern 6 in
+	computation overhead: 39.635947
+[worker 3][pid 481984] finished processing pattern 7 in
+	computation overhead: 20.065256
+[worker 1][pid 481980] finished processing pattern 5 in
+	computation overhead: 24.908493
+[worker 0][pid 481979] finished processing pattern 8 in
+	computation overhead: 52.903404
+[worker 2][pid 481982] finished processing pattern 10 in
+	computation overhead: 55.685691
+[worker 0][pid 481979] finished processing pattern 12 in
+	computation overhead: 35.964207
+[worker 2][pid 481982] finished processing pattern 14 in
+	computation overhead: 36.102746
+[worker 2][pid 481982] finished processing pattern 18 in
+	computation overhead: 28.287981
+[worker 1][pid 481980] finished processing pattern 9 in
+	computation overhead: 132.903704
+[worker 3][pid 481984] finished processing pattern 11 in
+	computation overhead: 144.204364
+[worker 2][pid 481982] finished processing pattern 22 in
+	computation overhead: 34.560386
+[worker 1][pid 481980] finished processing pattern 13 in
+	computation overhead: 40.517445
+[worker 2][pid 481982] finished processing pattern 26 in
+	computation overhead: 36.124980
+[worker 3][pid 481984] finished processing pattern 15 in
+	computation overhead: 47.830570
+[worker 0][pid 481979] finished processing pattern 16 in
+	computation overhead: 141.850391
+[worker 3][pid 481984] finished processing pattern 19 in
+	computation overhead: 36.400642
+[worker 0][pid 481979] finished processing pattern 20 in
+	computation overhead: 135.729092
+[worker 1][pid 481980] finished processing pattern 17 in
+	computation overhead: 166.402847
+[worker 1][pid 481980] finished processing pattern 21 in
+	computation overhead: 28.416390
+[worker 3][pid 481984] finished processing pattern 23 in
+	computation overhead: 144.855541
+[worker 1][pid 481980] finished processing pattern 25 in
+	computation overhead: 31.365599
+[worker 0][pid 481979] finished processing pattern 24 in
+	computation overhead: 128.445360
+total computation overhead: 509.225787

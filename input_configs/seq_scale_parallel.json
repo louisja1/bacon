@@ -1,0 +1,10 @@
+{
+    "path_to_sql": "../workload/scale.sql",
+    "dir_to_output": "../results/",
+    "timeout_in_sec": 900,
+    "parallel": {
+        "max_parallel_workers": 8,
+        "max_parallel_workers_per_gather": 4
+    },
+    "debug": false
+}

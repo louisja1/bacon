@@ -1,0 +1,8 @@
+{
+    "path_to_sql": "../workload/synthetic.sql",
+    "dir_to_output": "../results/",
+    "timeout_in_sec": 3600,
+    "group_by": "join pattern",
+    "materialized": true,
+    "debug": false
+}

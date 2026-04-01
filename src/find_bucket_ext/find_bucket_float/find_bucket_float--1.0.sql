@@ -4,4 +4,6 @@ CREATE FUNCTION find_bucket_float(
     need_null boolean
 ) RETURNS int
 AS 'MODULE_PATHNAME', 'find_bucket_float'
-LANGUAGE C;
+LANGUAGE C
+IMMUTABLE
+PARALLEL SAFE;

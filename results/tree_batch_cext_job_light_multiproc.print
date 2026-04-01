@@ -1,0 +1,39 @@
+total parsing overhead 0.08542752265930176
+total loading overhead 0.006865501403808594
+[worker 3][pid 333817] finished processing pattern 3 in
+	computation overhead: 14.247007
+[worker 2][pid 333815] finished processing pattern 2 in
+	computation overhead: 17.924860
+[worker 0][pid 333812] finished processing pattern 0 in
+	computation overhead: 20.367287
+[worker 1][pid 333813] finished processing pattern 1 in
+	computation overhead: 28.655946
+[worker 0][pid 333812] finished processing pattern 4 in
+	computation overhead: 22.317344
+[worker 2][pid 333815] finished processing pattern 6 in
+	computation overhead: 31.067117
+[worker 1][pid 333813] finished processing pattern 5 in
+	computation overhead: 26.156447
+[worker 0][pid 333812] finished processing pattern 8 in
+	computation overhead: 39.609833
+[worker 1][pid 333813] finished processing pattern 9 in
+	computation overhead: 28.879097
+[worker 2][pid 333815] finished processing pattern 10 in
+	computation overhead: 43.535515
+[worker 2][pid 333815] finished processing pattern 14 in
+	computation overhead: 21.095535
+[worker 0][pid 333812] finished processing pattern 12 in
+	computation overhead: 37.016669
+[worker 0][pid 333812] finished processing pattern 16 in
+	computation overhead: 36.593203
+[worker 3][pid 333817] finished processing pattern 7 in
+	computation overhead: 144.976520
+[worker 3][pid 333817] finished processing pattern 11 in
+	computation overhead: 24.368343
+[worker 1][pid 333813] finished processing pattern 13 in
+	computation overhead: 129.403014
+[worker 1][pid 333813] finished processing pattern 17 in
+	computation overhead: 10.464443
+[worker 3][pid 333817] finished processing pattern 15 in
+	computation overhead: 89.016231
+total computation overhead: 272.675344

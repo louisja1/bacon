@@ -1,0 +1,119 @@
+total parsing overhead 0.30548858642578125
+total loading overhead 0.01665210723876953
+[worker 0][pid 507170] finished processing pattern 0 in
+	computation overhead: 0.921383
+[worker 3][pid 507180] finished processing pattern 3 in
+	computation overhead: 0.992266
+[worker 1][pid 507173] finished processing pattern 1 in
+	computation overhead: 1.094256
+[worker 0][pid 507170] finished processing pattern 4 in
+	computation overhead: 0.305936
+[worker 2][pid 507178] finished processing pattern 2 in
+	computation overhead: 1.224214
+[worker 0][pid 507170] finished processing pattern 8 in
+	computation overhead: 0.394571
+[worker 3][pid 507180] finished processing pattern 7 in
+	computation overhead: 0.707928
+[worker 1][pid 507173] finished processing pattern 5 in
+	computation overhead: 0.710683
+[worker 0][pid 507170] finished processing pattern 12 in
+	computation overhead: 0.469412
+[worker 3][pid 507180] finished processing pattern 11 in
+	computation overhead: 0.412409
+[worker 1][pid 507173] finished processing pattern 9 in
+	computation overhead: 0.435845
+[worker 3][pid 507180] finished processing pattern 15 in
+	computation overhead: 0.124552
+[worker 0][pid 507170] finished processing pattern 16 in
+	computation overhead: 0.335805
+[worker 2][pid 507178] finished processing pattern 6 in
+	computation overhead: 1.276780
+[worker 1][pid 507173] finished processing pattern 13 in
+	computation overhead: 0.578807
+[worker 1][pid 507173] finished processing pattern 17 in
+	computation overhead: 0.198481
+[worker 2][pid 507178] finished processing pattern 10 in
+	computation overhead: 0.578066
+[worker 0][pid 507170] finished processing pattern 20 in
+	computation overhead: 0.692406
+[worker 3][pid 507180] finished processing pattern 19 in
+	computation overhead: 0.879031
+[worker 3][pid 507180] finished processing pattern 23 in
+	computation overhead: 0.597081
+[worker 0][pid 507170] finished processing pattern 24 in
+	computation overhead: 0.687649
+[worker 3][pid 507180] finished processing pattern 27 in
+	computation overhead: 0.845636
+[worker 2][pid 507178] finished processing pattern 14 in
+	computation overhead: 1.606196
+[worker 1][pid 507173] finished processing pattern 21 in
+	computation overhead: 1.912484
+[worker 2][pid 507178] finished processing pattern 18 in
+	computation overhead: 1.038049
+[worker 1][pid 507173] finished processing pattern 25 in
+	computation overhead: 1.029081
+[worker 3][pid 507180] finished processing pattern 31 in
+	computation overhead: 1.727607
+[worker 0][pid 507170] finished processing pattern 28 in
+	computation overhead: 2.556076
+[worker 2][pid 507178] finished processing pattern 22 in
+	computation overhead: 0.743914
+[worker 0][pid 507170] finished processing pattern 32 in
+	computation overhead: 0.319416
+[worker 1][pid 507173] finished processing pattern 29 in
+	computation overhead: 0.983187
+[worker 1][pid 507173] finished processing pattern 33 in
+	computation overhead: 0.307031
+[worker 2][pid 507178] finished processing pattern 26 in
+	computation overhead: 1.198074
+[worker 3][pid 507180] finished processing pattern 35 in
+	computation overhead: 1.470825
+[worker 0][pid 507170] finished processing pattern 36 in
+	computation overhead: 1.232810
+[worker 1][pid 507173] finished processing pattern 37 in
+	computation overhead: 0.704950
+[worker 2][pid 507178] finished processing pattern 30 in
+	computation overhead: 0.784553
+[worker 3][pid 507180] finished processing pattern 39 in
+	computation overhead: 1.109610
+[worker 2][pid 507178] finished processing pattern 34 in
+	computation overhead: 0.468827
+[worker 2][pid 507178] finished processing pattern 38 in
+	computation overhead: 0.844119
+[worker 0][pid 507170] finished processing pattern 40 in
+	computation overhead: 1.879143
+[worker 0][pid 507170] finished processing pattern 44 in
+	computation overhead: 0.558015
+[worker 1][pid 507173] finished processing pattern 41 in
+	computation overhead: 2.586716
+[worker 0][pid 507170] finished processing pattern 48 in
+	computation overhead: 0.405761
+[worker 0][pid 507170] finished processing pattern 52 in
+	computation overhead: 1.259506
+[worker 1][pid 507173] finished processing pattern 45 in
+	computation overhead: 1.576231
+[worker 2][pid 507178] finished processing pattern 42 in
+	computation overhead: 2.440373
+[worker 2][pid 507178] finished processing pattern 46 in
+	computation overhead: 0.595276
+[worker 3][pid 507180] finished processing pattern 43 in
+	computation overhead: 4.012664
+[worker 3][pid 507180] finished processing pattern 47 in
+	computation overhead: 0.819369
+[worker 1][pid 507173] finished processing pattern 49 in
+	computation overhead: 2.112462
+[worker 3][pid 507180] finished processing pattern 51 in
+	computation overhead: 0.797281
+[worker 0][pid 507170] finished processing pattern 56 in
+	computation overhead: 2.529375
+[worker 2][pid 507178] finished processing pattern 50 in
+	computation overhead: 2.054546
+[worker 3][pid 507180] finished processing pattern 55 in
+	computation overhead: 0.646768
+[worker 2][pid 507178] finished processing pattern 54 in
+	computation overhead: 0.773098
+[worker 1][pid 507173] finished processing pattern 53 in
+	computation overhead: 1.662647
+[worker 1][pid 507173] finished processing pattern 57 in
+	computation overhead: 2.476261
+total computation overhead: 18.428187

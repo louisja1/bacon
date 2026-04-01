@@ -1,0 +1,100 @@
+total parsing overhead 20.156204223632812
+total loading overhead 2.54219126701355
+===== Pattern 0/16, proccessing 6908 SQLs that belong to join pattern: ()
+	the overhead of enumerating all rows in hd is 0.0049114227294921875 seconds.
+	bucketization overhead is 6.961822509765625e-05. There are 60 buckets of dim 2
+	computing the result by the unified histogram takes 0.735831 seconds
+	[hd] computation overhead: 0.741094
+	the overhead of enumerating all rows in d is 0.04016733169555664 seconds.
+	bucketization overhead is 0.00201416015625. There are 2401 buckets of dim 2
+	computing the result by the unified histogram takes 0.087777 seconds
+	[d] computation overhead: 0.130492
+	the overhead of enumerating all rows in ss is 7.658144474029541 seconds.
+	bucketization overhead is 0.20422935485839844. There are 437202 buckets of dim 3
+	computing the result by the unified histogram takes 6.023988 seconds
+	[ss] computation overhead: 13.955812
+	the overhead of enumerating all rows in s is 0.002389669418334961 seconds.
+	bucketization overhead is 5.91278076171875e-05. There are 14 buckets of dim 1
+	computing the result by the unified histogram takes 0.001181 seconds
+	[s] computation overhead: 0.022791
+	the overhead of enumerating all rows in cd is 0.3452613353729248 seconds.
+	bucketization overhead is 1.9550323486328125e-05. There are 7 buckets of dim 1
+	computing the result by the unified histogram takes 0.000822 seconds
+	[cd] computation overhead: 0.346584
+	computation overhead: 15.284689
+===== Pattern 1/16, proccessing 651 SQLs that belong to join pattern: (('s.s_store_sk', '=', 'ss.ss_store_sk'),)
+	the overhead of enumerating all rows in s is 11.67056655883789 seconds.
+	bucketization overhead is 4.400640249252319. There are 1335031 buckets of dim 4
+	computing the result by the unified histogram takes 7.999549 seconds
+	computation overhead: 24.295224
+===== Pattern 2/16, proccessing 729 SQLs that belong to join pattern: (('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 12.59940505027771 seconds.
+	bucketization overhead is 4.107058763504028. There are 4397952 buckets of dim 6
+	computing the result by the unified histogram takes 32.898319 seconds
+	computation overhead: 50.096318
+===== Pattern 3/16, proccessing 1242 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'),)
+	the overhead of enumerating all rows in d is 11.648933172225952 seconds.
+	bucketization overhead is 3.126055955886841. There are 4036126 buckets of dim 5
+	computing the result by the unified histogram takes 47.869922 seconds
+	computation overhead: 63.044007
+===== Pattern 4/16, proccessing 341 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'))
+	the overhead of enumerating all rows in d is 15.640179634094238 seconds.
+	bucketization overhead is 3.329744338989258. There are 3416431 buckets of dim 6
+	computing the result by the unified histogram takes 9.707013 seconds
+	computation overhead: 28.976933
+===== Pattern 5/16, proccessing 289 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 14.510404109954834 seconds.
+	bucketization overhead is 3.05167293548584. There are 1072361 buckets of dim 5
+	computing the result by the unified histogram takes 2.936835 seconds
+	computation overhead: 20.621373
+===== Pattern 6/16, proccessing 1872 SQLs that belong to join pattern: (('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'),)
+	the overhead of enumerating all rows in hd is 11.67047929763794 seconds.
+	bucketization overhead is 3.4051151275634766. There are 3863647 buckets of dim 5
+	computing the result by the unified histogram takes 80.551519 seconds
+	computation overhead: 96.067430
+===== Pattern 7/16, proccessing 532 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 12.208485841751099 seconds.
+	bucketization overhead is 3.248871326446533. There are 4448860 buckets of dim 6
+	computing the result by the unified histogram takes 19.962854 seconds
+	computation overhead: 35.752014
+===== Pattern 8/16, proccessing 415 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+	the overhead of enumerating all rows in hd is 15.144740343093872 seconds.
+	bucketization overhead is 3.554825782775879. There are 3499327 buckets of dim 6
+	computing the result by the unified histogram takes 14.689979 seconds
+	computation overhead: 33.707241
+===== Pattern 9/16, proccessing 1096 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 14.338644027709961 seconds.
+	bucketization overhead is 3.608778238296509. There are 5247853 buckets of dim 8
+	computing the result by the unified histogram takes 62.936630 seconds
+	computation overhead: 81.371918
+===== Pattern 10/16, proccessing 686 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+	the overhead of enumerating all rows in hd is 16.732560873031616 seconds.
+	bucketization overhead is 3.6340322494506836. There are 5229837 buckets of dim 8
+	computing the result by the unified histogram takes 37.363111 seconds
+	computation overhead: 58.176609
+===== Pattern 11/16, proccessing 2632 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 18.32447361946106 seconds.
+	bucketization overhead is 3.7276532649993896. There are 5263531 buckets of dim 9
+	computing the result by the unified histogram takes 165.032727 seconds
+	computation overhead: 187.474589
+===== Pattern 12/16, proccessing 586 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 16.223652839660645 seconds.
+	bucketization overhead is 3.537280797958374. There are 4715228 buckets of dim 7
+	computing the result by the unified histogram takes 28.358195 seconds
+	computation overhead: 48.465441
+===== Pattern 13/16, proccessing 418 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'),)
+	the overhead of enumerating all rows in cd is 13.44070315361023 seconds.
+	bucketization overhead is 2.917771100997925. There are 911046 buckets of dim 4
+	computing the result by the unified histogram takes 3.342025 seconds
+	computation overhead: 19.811939
+===== Pattern 14/16, proccessing 1111 SQLs that belong to join pattern: (('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('hd.hd_demo_sk', '=', 'ss.ss_hdemo_sk'))
+	the overhead of enumerating all rows in hd is 13.28169298171997 seconds.
+	bucketization overhead is 3.47993803024292. There are 5215089 buckets of dim 7
+	computing the result by the unified histogram takes 61.178951 seconds
+	computation overhead: 78.346671
+===== Pattern 15/16, proccessing 492 SQLs that belong to join pattern: (('cd.cd_demo_sk', '=', 'ss.ss_cdemo_sk'), ('d.d_date_sk', '=', 'ss.ss_sold_date_sk'), ('s.s_store_sk', '=', 'ss.ss_store_sk'))
+	the overhead of enumerating all rows in s is 16.06559729576111 seconds.
+	bucketization overhead is 3.4092135429382324. There are 4418272 buckets of dim 7
+	computing the result by the unified histogram takes 19.139660 seconds
+	computation overhead: 38.982325
+total computation overhead: 880.475541

@@ -15,17 +15,22 @@ algorithms = [
     "postfilter",
     "tree_batch_cext",
     "hybrid",
+    "seq_parallel",
+    "postfilter_parallel",
+    "tree_batch_cext_parallel",
+    # "materialized" only has results for synthetic and dsb_grasp_20k
+    "postfilter_materialized",
 ]
 
 workloads = [
     "synthetic",
-    "scale",
-    "job_light_single",
-    "job_light_join",
-    "stats_ceb_single",
-    "stats_ceb_join",
-    "stats_ceb",
-    "job_light",
+    # "scale",
+    # "job_light_single",
+    # "job_light_join",
+    # "stats_ceb_single",
+    # "stats_ceb_join",
+    # "stats_ceb",
+    # "job_light",
     "dsb_grasp_20k",
     ## following: no results on hybrid
     # "job_light_1k", 
@@ -40,7 +45,7 @@ header = [
     "n_queries"
 ]
 for algorithm in algorithms:
-    if algorithm in ["seq", "postfilter"]:
+    if algorithm in ["seq", "postfilter", "seq_parallel", "postfilter_parallel", "postfilter_materialized"]:
         header += [
             "sec_" + algorithm,
             "none_" + algorithm,
@@ -70,7 +75,14 @@ def sum_with_none(l):
     return _sum, _none_cnt
 
 def parse_result(result_file, algorithm):
-    assert result_file.startswith(algorithm)
+    if "parallel" in algorithm:
+        assert (
+            result_file.endswith("_parallel.ans") or result_file.endswith("_parallel.print")
+        ) and result_file.startswith(algorithm.replace("_parallel", ""))
+    elif "materialized" in algorithm:
+        assert result_file.endswith("_materialized.print") and result_file.startswith(algorithm.replace("_materialized", ""))
+    else:
+        assert result_file.startswith(algorithm)
     overheads = []
     nones = []
     additional = []
@@ -78,11 +90,11 @@ def parse_result(result_file, algorithm):
     switch_to = []
 
     with open(results_dir + result_file, "r") as fin:
-        if algorithm == "seq":
+        if algorithm in ["seq", "seq_parallel"]:
             # return the time overhead for each qid sequentially
             for line in list(fin.readlines())[2:]:
                 overheads.append(none_or_float(line.strip().split(",")[1]))
-        elif algorithm == "postfilter":
+        elif algorithm in ["postfilter", "postfilter_parallel", "postfilter_materialized"]:
             # return the time overhead for each pattern_id sequentially
             flag_for_single_tab_jp = False
             for line in fin.readlines():
@@ -104,7 +116,7 @@ def parse_result(result_file, algorithm):
                     additional.append(float(line.strip().split(" ")[-1].rstrip(")")))
                     if nones[-1] > 0:
                         overheads[-1] = "None"
-        elif algorithm == "tree_batch_cext":
+        elif algorithm in ["tree_batch_cext", "tree_batch_cext_parallel"]:
             # return the time overhead for each pattern_id sequentially
             flag_for_single_tab_jp = False
             for line in fin.readlines():
@@ -169,6 +181,14 @@ if __name__ == "__main__":
                     result_file += ".ans"
                 elif algorithm in ["postfilter", "tree_batch_cext", "hybrid"]:
                     result_file += ".print"
+                elif algorithm == "seq_parallel":
+                    result_file = result_file.replace("_parallel", "") + "_parallel.ans"
+                elif algorithm == "tree_batch_cext_parallel":
+                    result_file = result_file.replace("_parallel", "") + "_parallel.print"
+                elif algorithm == "postfilter_parallel":
+                    result_file = result_file.replace("_parallel", "") + "_parallel.print"
+                elif algorithm == "postfilter_materialized":
+                    result_file = result_file.replace("_materialized", "") + "_materialized.print"
                 else:
                     assert True == False 
                 (
@@ -243,7 +263,7 @@ if __name__ == "__main__":
                     "n_queries" : len(workload_summary.id_to_qid[pattern_id]),
                 }
                 for algorithm in algorithms:
-                    if algorithm == "seq":
+                    if algorithm in ["seq", "seq_parallel"]:
                         _sum, _none_cnt = sum_with_none([
                             algorithm_to_overheads[algorithm][qid]
                             for qid in workload_summary.id_to_qid[pattern_id]
@@ -253,14 +273,14 @@ if __name__ == "__main__":
                         res["additional_at_least_" + algorithm] = _none_cnt * 900.
                         if _none_cnt > 0:
                             res["sec_" + algorithm] = "None"
-                    elif algorithm == "postfilter":
+                    elif algorithm in ["postfilter", "postfilter_parallel", "postfilter_materialized"]:
                         res["sec_" + algorithm] = \
                             algorithm_to_overheads[algorithm][pattern_id]
                         res["none_" + algorithm] = \
                             algorithm_to_nones[algorithm][pattern_id]
                         res["additional_at_least_" + algorithm] = \
                             algorithm_to_additional[algorithm][pattern_id]
-                    elif algorithm == "tree_batch_cext":
+                    elif algorithm in ["tree_batch_cext", "tree_batch_cext_parallel"]:
                         res["sec_" + algorithm] = \
                             algorithm_to_overheads[algorithm][pattern_id]
                     elif algorithm == "hybrid":
@@ -284,7 +304,14 @@ if __name__ == "__main__":
                             "sec_postfilter": algorithm_to_alias_subresults["postfilter"][alias][0],
                             "none_postfilter": algorithm_to_alias_subresults["postfilter"][alias][1],
                             "additional_at_least_postfilter": algorithm_to_alias_subresults["postfilter"][alias][2],
+                            "sec_postfilter_parallel": algorithm_to_alias_subresults["postfilter_parallel"][alias][0],
+                            "none_postfilter_parallel": algorithm_to_alias_subresults["postfilter_parallel"][alias][1],
+                            "additional_at_least_postfilter_parallel": algorithm_to_alias_subresults["postfilter_parallel"][alias][2],
+                            "sec_postfilter_materialized": algorithm_to_alias_subresults["postfilter_materialized"][alias][0],
+                            "none_postfilter_materialized": algorithm_to_alias_subresults["postfilter_materialized"][alias][1],
+                            "additional_at_least_postfilter_materialized": algorithm_to_alias_subresults["postfilter_materialized"][alias][2],
                             "sec_tree_batch_cext": algorithm_to_alias_subresults["tree_batch_cext"][alias][0],
+                            "sec_tree_batch_cext_parallel": algorithm_to_alias_subresults["tree_batch_cext_parallel"][alias][0],
                         })
                         if "seq" in algorithms:
                             tsv_out[-1]["sec_seq"] = ""
