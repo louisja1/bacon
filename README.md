@@ -1,5 +1,5 @@
 # BaCon
-Codes, data and other artifacts of BaCon. For VLDB26 reviewers only.
+Codes, data and other artifacts of BaCon to appear at VLDB26.
 
 ## Reproduction 
 Check `src/run.sh` for the run commands of each experiment.
